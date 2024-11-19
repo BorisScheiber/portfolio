@@ -1,0 +1,79 @@
+@import "./variables.scss";
+
+@mixin dFlex($justify: center, $align: center, $gap: 0px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin content-container($position: static, $justify: space-between) {
+  max-width: $max-width;
+  width: 100%;
+  display: flex;
+  justify-content: $justify;
+  position: $position;
+}
+
+@mixin vertical-line($width: 100px, $bgcolor: $primary-color, $height: 4px) {
+  display: block;
+  width: $width;
+  height: $height;
+  background-color: $bgcolor;
+}
+
+@mixin primary-button {
+  color: #ffffff;
+  border-radius: 10px;
+  background-color: $primary-color;
+  padding: 15px 30px;
+  font-size: 23px;
+  transition: $transiton-base;
+  transform-origin: top;
+
+  &:hover {
+    background-color: $secondary-color;
+    transform: scaleY(1.2) scaleX(1.2);
+  }
+}
+
+@mixin secondary-button(
+  $bg-color: $secondary-color,
+  $hover-bg: $primary-color,
+  $border: none
+) {
+  width: 152px;
+  background-color: $bg-color;
+  padding: 15px 30px;
+  @include dFlex();
+  font-size: 23px;
+  line-height: 27.6px;
+  border-radius: 10px;
+  border: $border;
+  transition: $transiton-base;
+
+  &:hover {
+    background-color: $hover-bg;
+  }
+}
+
+@mixin section-container(
+  $position: static,
+  $padding-top: 100px,
+  $padding-bottom: 100px
+) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  display: flex;
+  justify-content: center;
+  position: $position;
+}
+
+@mixin shadow-element {
+  position: absolute;
+  z-index: -1;
+
+  img {
+    animation: pulse 3s ease-in-out infinite;
+  }
+}

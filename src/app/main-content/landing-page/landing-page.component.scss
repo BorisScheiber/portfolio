@@ -1,0 +1,136 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+section {
+  height: calc(100vh - 110px);
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.landing-content {
+  @include content-container($position: relative);
+  margin-top: 120px;
+}
+
+.imagebox {
+  position: relative;
+  height: max-content;
+  //   margin-left: 47px;
+  z-index: -7;
+  height: 700px;
+}
+
+.landing-img {
+  height: 100%;
+}
+
+.shadow {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  left: -130px;
+  top: -70px;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.bg-shape {
+  z-index: -5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  img {
+    width: 100%;
+    max-height: 450px;
+  }
+}
+
+.info-container {
+  @include dFlex($gap: 40px);
+  flex-direction: column;
+  max-height: 700px;
+}
+
+.headline-container {
+  @include dFlex();
+}
+
+.rotate-text {
+  @include dFlex();
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  font-size: 64px;
+  line-height: 76.8px;
+}
+
+.dev-text {
+  font-size: 58px;
+  line-height: 69.6px;
+  color: $secondary-color;
+}
+
+.talk-button {
+ @include primary-button;
+}
+
+.nav-socials-container {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  @include dFlex($justify: null, $align: flex-end);
+}
+
+.links {
+  @include dFlex($gap: 32px);
+
+  span {
+    @include vertical-line($width: 100px, $bgcolor: $secondary-color);
+  }
+
+  img {
+    @include dFlex();
+    transition: $transiton-base;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  a:last-of-type {
+    font-size: 23px;
+    line-height: 27.6px;
+    transition: $transiton-base;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.scroll-down {
+  margin-left: auto;
+  margin-right: 47px;
+  @include dFlex($gap: 10px);
+  flex-direction: column;
+  animation: scrollDownAnimation 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    infinite;
+
+  span {
+    writing-mode: vertical-rl;
+    font-size: 23px;
+  }
+}
+
+@keyframes scrollDownAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

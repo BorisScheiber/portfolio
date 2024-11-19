@@ -1,0 +1,70 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+section {
+    @include section-container();
+}
+
+.about-me-content {
+  @include content-container($position: relative);
+}
+
+.about-me-description {
+  max-width: 600px;
+  @include dFlex($align: null, $gap: 40px);
+  flex-direction: column;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  div {
+    @include dFlex($justify: null, $align: flex-start, $gap: 16px);
+
+    img {
+      transition: $transiton-base;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+
+.profile-img-container {
+  @include dFlex();
+  position: relative;
+
+  div {
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    border: 4px solid $primary-color;
+    overflow: hidden;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    scale: 1.1;
+  }
+
+  span {
+    @include vertical-line($bgcolor: $primary-color, $width: 250px);
+  }
+}
+
+.shadow-element {
+  @include shadow-element();
+  right: -500px;
+  top: -400px;
+  filter: blur(46.5px);
+}

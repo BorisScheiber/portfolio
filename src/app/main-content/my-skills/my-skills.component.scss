@@ -1,0 +1,117 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+section {
+    @include section-container();
+}
+
+.my-skills-content {
+  @include content-container($position: relative);
+}
+
+.my-skills-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 54px;
+  max-width: 650px;
+
+  div {
+    @include dFlex();
+    width: 120px;
+    // background-color: lightcoral;
+    flex-direction: column-reverse;
+
+    img {
+      transform-origin: center;
+
+      &:hover {
+        animation: wiggle 0.5s infinite ease-in-out;
+      }
+    }
+
+    span {
+      text-align: center;
+      cursor: default;
+      padding-top: 10px;
+
+      &:hover + img {
+        animation: wiggle 0.5s infinite ease-in-out;
+      }
+    }
+
+    &:last-of-type span {
+      color: $secondary-color;
+    }
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.my-skills-text {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    max-width: 571px;
+
+}
+
+.headline {
+
+    @include dFlex($justify: flex-end, $gap: 32px);
+
+
+    span {
+        @include vertical-line($width: 100px, $bgcolor: $primary-color);
+      }
+}
+
+.info {
+    @include dFlex($align: flex-end, $gap: 16px);
+    flex-direction: column;
+    text-align: right;
+    margin-right: 132px;
+   
+
+    a {
+        @include primary-button;
+        max-width: fit-content;
+        margin-top: 24px;
+    }
+
+    p:first-of-type {
+        margin-bottom: 8px;
+    }
+    
+    .highlight-text {
+        font-size: 32px;
+        line-height: 38.4px;
+        font-weight: $font-bold;
+
+        .skill-text {
+            color: $secondary-color;
+        }
+    }
+}
+
+.shadow-element {
+    @include shadow-element();
+    left: -600px;
+    bottom: -700px;
+}

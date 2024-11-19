@@ -1,0 +1,76 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
+
+header {
+  padding: 37px 100px 37px 100px;
+  height: 110px;
+  @include dFlex();
+  background-color: $bg-color;
+  backdrop-filter: blur(65px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  span {
+    font-size: 32px;
+    font-weight: $font-medium;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+  }
+}
+
+.header-content {
+    max-width: $max-width;  
+    width: 100%;
+    display: flex;
+}
+
+.menu {
+ @include dFlex($align: center, $gap: 29px);
+  margin-left: auto;
+}
+
+.link {
+  font-size: 23px;
+  line-height: 27.6px;
+  position: relative;
+  transition: $transiton-base; 
+
+  &.clicked {
+    color: $primary-color;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background-color: $secondary-color;
+    transform: scaleX(0);
+    transition: transform 1s ease;
+  }
+
+  &.clicked::after {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.curly-braces {
+  color: $primary-color;
+  font-weight: $font-semibold !important;
+}
+
+.logo-i {
+  font-family: "Fira Code";
+  font-size: 0.93em !important;
+  color: $secondary-color;
+  font-weight: $font-semibold !important;
+}

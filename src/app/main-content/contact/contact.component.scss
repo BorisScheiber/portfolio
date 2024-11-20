@@ -1,0 +1,35 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+
+section {
+    @include section-container();
+}
+
+.contact-content {
+  @include content-container($position: relative);
+  flex-direction: column;
+}
+
+.headline {
+    @include dFlex($justify: flex-start, $gap: 32px);
+    width: 100%;
+    margin-bottom: 40px;
+    
+    span {
+        @include vertical-line($bgcolor: $secondary-color, $width: 507px);
+    }
+}
+
+.contact-text-container {
+    max-width: 474px;
+
+     h2 {
+        color: white;
+        margin-bottom: 24px;
+    }
+
+    p:first-of-type {
+        margin-bottom: 16px;
+    }
+}

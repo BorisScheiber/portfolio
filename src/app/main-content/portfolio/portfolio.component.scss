@@ -1,83 +1,85 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/mixins.scss";
 
-
 section {
-   @include section-container();
+  @include section-container();
 }
 
 .portfolio-content {
-    @include content-container($justify: unset, $position: relative);
-    flex-direction: column;
-    align-items: center;
+  @include content-container($justify: unset, $position: relative);
+  flex-direction: column;
+  align-items: center;
 }
 
 .headline {
+  @include dFlex($justify: flex-end, $gap: 32px);
+  width: 100%;
+  margin-bottom: 40px;
 
-    @include dFlex ($justify: flex-end, $gap: 32px);
-    width: 100%;
-    margin-bottom: 40px;
-    
-    span:first-of-type {
-        @include vertical-line($bgcolor: $secondary-color);
-    }
+  span:first-of-type {
+    @include vertical-line($bgcolor: $secondary-color);
+  }
 
-    span:last-of-type {
-        @include vertical-line($bgcolor: $secondary-color ,$width: 507px);
-    }
+  span:last-of-type {
+    @include vertical-line($bgcolor: $secondary-color, $width: 507px);
+  }
 }
 
 .projects-container {
-    width: 100%;
-    margin-top: 32px;
+  width: 100%;
+  margin-top: 32px;
 }
 
 .single-project {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .project-imagebox {
-    height: 450px;
+  height: 450px;
 
-    img {
-        height: 100%;
-    }
+  img {
+    height: 100%;
+  }
 }
 
 .project-info-container {
-    max-width: 513px;
+  max-width: 513px;
 }
 
 .project-descritpion {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .project-links {
-    margin-top: 35px;
-    display: flex;
-    gap: 86px;
+  margin-top: 35px;
+  display: flex;
+  gap: 86px;
 
-    a:first-of-type {
-      @include secondary-button();
-    }
+  a:first-of-type {
+    @include secondary-button();
+  }
 
-    a:last-of-type {
-      @include secondary-button($bg-color: none, $hover-bg: $primary-color, $border: 2px solid $primary-color);
-    }
+  a:last-of-type {
+    @include secondary-button(
+      $bg-color: none,
+      $hover-bg: $primary-color,
+      $border: 2px solid $primary-color
+    );
+  }
 }
 
 .row-reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .shadow-element {
-    @include shadow-element();
-    transform: rotate(180deg);
-    right: -400px;
-    top: 600px;
-    filter: blur(46.5px);
+  @include shadow-element();
+  transform: rotate(180deg);
+  right: -400px;
+  top: 600px;
+  filter: blur(46.5px);
 }

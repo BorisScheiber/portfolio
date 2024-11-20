@@ -25,7 +25,7 @@ export class PortfolioComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       image: '/assets/img/joinlaptop.png',
       liveLink: '#',
-      githubLink: '#'
+      githubLink: 'https://github.com/BorisScheiber/join-294'
     },
     {
       title: 'El Pollo Loco',
@@ -33,7 +33,7 @@ export class PortfolioComponent {
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       image: '/assets/img/elpollolocolaptop.png',
       liveLink: '#',
-      githubLink: '#',
+      githubLink: 'https://github.com/BorisScheiber/el-pollo-loco',
       isReverse: true
     },
     {
@@ -42,7 +42,7 @@ export class PortfolioComponent {
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       image: '/assets/img/pokedexlaptop.png',
       liveLink: '#',
-      githubLink: '#'
+      githubLink: 'https://github.com/BorisScheiber/pokedex'
     }
   ];
 }

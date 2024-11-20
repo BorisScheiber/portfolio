@@ -12,13 +12,6 @@ header {
   left: 0;
   right: 0;
   z-index: 50;
-
-  span {
-    font-size: 32px;
-    font-weight: $font-medium;
-    letter-spacing: 0.8px;
-    cursor: pointer;
-  }
 }
 
 .header-content {
@@ -61,16 +54,4 @@ header {
   &:hover {
     color: $primary-color;
   }
-}
-
-.curly-braces {
-  color: $primary-color;
-  font-weight: $font-semibold !important;
-}
-
-.logo-i {
-  font-family: "Fira Code";
-  font-size: 0.93em !important;
-  color: $secondary-color;
-  font-weight: $font-semibold !important;
 }

@@ -1,0 +1,23 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/mixins.scss";
+
+.logo {
+  font-size: 32px;
+  font-weight: $font-medium;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 145px;
+}
+
+.curly-braces {
+  color: $primary-color;
+  font-weight: $font-semibold !important;
+}
+
+.logo-i {
+  font-family: "Fira Code";
+  font-size: 0.93em !important;
+  color: $secondary-color;
+  font-weight: $font-semibold !important;
+}

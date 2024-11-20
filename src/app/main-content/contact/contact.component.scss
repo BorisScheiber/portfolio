@@ -1,9 +1,8 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/mixins.scss";
 
-
 section {
-    @include section-container();
+  @include section-container();
 }
 
 .contact-content {
@@ -12,24 +11,119 @@ section {
 }
 
 .headline {
-    @include dFlex($justify: flex-start, $gap: 32px);
-    width: 100%;
-    margin-bottom: 40px;
-    
-    span {
-        @include vertical-line($bgcolor: $secondary-color, $width: 507px);
-    }
+  @include dFlex($justify: flex-start, $gap: 32px);
+  width: 100%;
+  margin-bottom: 100px;
+
+  span {
+    @include vertical-line($bgcolor: $secondary-color, $width: 507px);
+  }
 }
 
 .contact-text-container {
-    max-width: 474px;
+  max-width: 474px;
 
-     h2 {
-        color: white;
-        margin-bottom: 24px;
+  h2 {
+    color: white;
+    margin-bottom: 24px;
+  }
+
+  p:first-of-type {
+    margin-bottom: 16px;
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-form {
+  width: 617px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 15px 25px 15px 25px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid $secondary-color;
+    color: white;
+    font-size: 16px;
+
+    &::placeholder {
+      color: white;
+      opacity: 1;
+      font-weight: 400;
+      font-size: 16px;
     }
 
-    p:first-of-type {
-        margin-bottom: 16px;
+    &:focus-visible {
+      outline: none;
+      border: 1px solid $primary-color;
     }
+  }
+
+  input {
+    height: 50px;
+  }
+
+  textarea {
+    height: 202px;
+    resize: none;
+  }
+}
+
+.privacy-accept {
+  display: flex;
+  align-items: center;
+
+  input {
+    margin-right: 8px;
+    padding: unset;
+    border: unset;
+    appearance: none;
+    height: 24px;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    background-image: url(../../../assets/img/icons/uncheckedbox.svg);
+
+    &:hover {
+      background-image: url(../../../assets/img/icons/uncheckedboxhover.svg);
+    }
+
+    &:checked {
+      background-image: url(../../../assets/img/icons/checkboxchecked.svg);
+
+      &:hover {
+        background-image: url(../../../assets/img/icons/checkboxcheckedhover.svg);
+      }
+    }
+  }
+
+  a {
+    color: $secondary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.send-button {
+  display: inline-flex;
+  justify-content: center;
+
+  button {
+    @include primary-button();
+  }
 }

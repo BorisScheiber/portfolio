@@ -3,6 +3,7 @@
 
 section {
   @include section-container();
+  padding-bottom: 0;
 }
 
 .portfolio-content {

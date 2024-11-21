@@ -72,7 +72,7 @@ section {
 }
 
 .talk-button {
- @include primary-button;
+  @include primary-button;
 }
 
 .nav-socials-container {
@@ -87,15 +87,6 @@ section {
 
   span {
     @include vertical-line($width: 100px, $bgcolor: $secondary-color);
-  }
-
-  img {
-    @include dFlex();
-    transition: $transiton-base;
-
-    &:hover {
-      transform: scale(1.3);
-    }
   }
 
   a:last-of-type {

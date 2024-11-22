@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logo',
@@ -10,4 +11,16 @@ import { Component, Input } from '@angular/core';
 export class LogoComponent {
  @Input() fontSize: string = '32px';
  @Input() minWidth: string = '145px';
+
+ constructor(private router: Router) {}
+
+ handleLogoClick() {
+  if (this.router.url !== '/') {
+    this.router.navigate(['/']).then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+ }
 }

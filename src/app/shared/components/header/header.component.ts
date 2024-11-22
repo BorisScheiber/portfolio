@@ -3,11 +3,12 @@ import { LogoComponent } from '../ui/logo/logo.component';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { LanguageSwitchComponent } from '../ui/language-switch/language-switch.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,LogoComponent, RouterModule],
+  imports: [CommonModule,LogoComponent, LanguageSwitchComponent, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

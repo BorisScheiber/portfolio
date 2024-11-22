@@ -1,0 +1,43 @@
+@import "../../../../../styles/variables.scss";
+@import "../../../../../styles/mixins.scss";
+
+.language-switch {
+  @include dFlex();
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+
+  input {
+    display: none;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #d7d7d7;
+  border-radius: 30px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-image: url("/assets/img/icons/ukflag.png");
+    background-size: cover;
+    background-position: center;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease, background-image 0.3s ease;
+  }
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+  background-image: url("/assets/img/icons/germanflag.png");
+}

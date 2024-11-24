@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { TranslateService } from '@ngx-translate/core';
 
 
 
@@ -13,5 +14,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Boris Scheiber';
+  constructor(private translate: TranslateService) {
+    this.translate.onLangChange.subscribe((event) => {
+      document.documentElement.lang = event.lang;
+    });
+  }
 }

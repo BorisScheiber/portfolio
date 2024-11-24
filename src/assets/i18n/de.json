@@ -1,7 +1,15 @@
 {
-    "header": {
-      "about": "Über mich",
-      "skills": "Fähigkeiten",
-      "portfolio": "Portfolio"
-    }
+  "header": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "portfolio": "Portfolio"
+  }, 
+
+  "landing": {
+    "iam": "Ich bin",
+    "developer": "FRONTEND ENTWICKLER",
+    "letsTalk": "Lass uns reden!",
+    "scrollDown": "Scroll runter"
   }
+
+}

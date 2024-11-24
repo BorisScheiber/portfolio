@@ -63,6 +63,10 @@ section {
   transform: rotate(-180deg);
   font-size: 64px;
   line-height: 76.8px;
+
+  &:lang(de) {
+    font-size: 44px;
+  }
 }
 
 .dev-text {

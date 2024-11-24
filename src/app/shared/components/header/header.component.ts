@@ -4,17 +4,19 @@ import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { LanguageSwitchComponent } from '../ui/language-switch/language-switch.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,LogoComponent, LanguageSwitchComponent, RouterModule],
+  imports: [CommonModule,LogoComponent, LanguageSwitchComponent, RouterModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
+
 
 
   handleLinkClick(event: MouseEvent) {

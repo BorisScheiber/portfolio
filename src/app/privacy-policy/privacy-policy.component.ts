@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
+
+  ngOnInit() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 
 }

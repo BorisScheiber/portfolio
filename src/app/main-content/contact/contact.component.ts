@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class ContactComponent {
 
+  
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

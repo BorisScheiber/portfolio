@@ -10,7 +10,7 @@ section {
 }
 
 .about-me-description {
-  max-width: 600px;
+  max-width: 555px;
   @include dFlex($align: null, $gap: 40px);
   flex-direction: column;
 }

@@ -1,7 +1,7 @@
 {
   "header": {
     "about": "Über mich",
-    "skills": "Fähigkeiten",
+    "skills": "Skills",
     "portfolio": "Portfolio"
   },
 
@@ -13,16 +13,16 @@
   },
   "about": {
     "title": "Über mich",
-    "description": "Servus, ich bin Boris, ein Frontend Entwickler in der Nähe von Imst, Österreich. Ich bin inspiriert von den endlosen Möglichkeiten der Technologie - erschaffe schöne, intuitive digitale Erlebnisse, die Ideen in Realität verwandeln.",
-    "location": "Egal ob von zu Hause oder vor Ort - ich bin für beide Arbeitsmodelle offen und schätze hybride Lösungen. Für mich ist Flexibilität der Schlüssel zu effektiver Zusammenarbeit.",
+    "description": "Servus, ich bin Boris, ein Frontend Entwickler aus dem schönen Tiroler Oberland. Mich fasziniert das grenzenlose Potenzial moderner Technologien - damit gestalte ich ästhetische, benutzerfreundliche digitale Erlebnisse, die Visionen zum Leben erwecken.",
+    "location": "Ob im Home Office oder vor Ort - ich bin für beide Arbeitsmodelle offen und schätze hybride Lösungen. Für mich ist Flexibilität der Schlüssel zu effektiver Zusammenarbeit.",
     "mindset": "Von Natur aus neugierig und aufgeschlossen, stelle ich mich gerne Herausforderungen, die meine Grenzen sowohl im Beruf als auch im Privatleben erweitern. Dieser ständige Drang zu lernen und zu wachsen treibt meine Leidenschaft für Selbstverbesserung in allen Lebensbereichen an.",
-    "programming": "Programmieren hat einen besonderen Platz in meinem Herzen, weil es mir erlaubt, meine Kreativität zu entfalten und gleichzeitig meinen analytischen Verstand einzusetzen. Die Fähigkeit, etwas von Grund auf neu zu erschaffen, komplexe Probleme zu lösen und ständig neue Technologien zu lernen, erfüllt mich mit Begeisterung."
+    "programming": "Programmieren hat einen besonderen Stellenwert für mich, da es mir ermöglicht, kreativ zu sein und gleichzeitig analytisch zu denken. Die Möglichkeit, etwas von Grund auf zu erschaffen, komplexe Herausforderungen zu meistern und mich ständig in neue Technologien einzuarbeiten, begeistert mich immer wieder aufs Neue."
   },
   "skills": {
-    "title": "Fähigkeiten",
+    "title": "Skills",
     "description": "Ich habe Erfahrung im Erstellen von Projekten mit verschiedenen Frontend-Technologien und Konzepten.",
-    "lookingFor": "Auf der Suche nach einer",
-    "anotherSkill": "anderen Fähigkeit",
+    "lookingFor": "Auf der Suche nach einem",
+    "anotherSkill": "anderen Skill",
     "contact": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
     "getInTouch": "Kontaktiere mich",
     "continuallyLearning": "Kontinuierlich lernen"
@@ -45,7 +45,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "problem": "Ein Problem zu lösen?",
+    "problem": "Hast du ein Problem zu lösen?",
     "description": "Kontaktiere mich über dieses Formular. Ich freue mich von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
     "needDev": "Frontend Entwickler gesucht?",
     "contactMe": "Kontaktiere mich!",
@@ -95,10 +95,11 @@
       "title": "Urheberrecht",
       "description": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen."
     },
-    "privacy": {
-      "title": "Datenschutz",
-      "description": "Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis und im Einklang mit der DSGVO (Datenschutz-Grundverordnung). Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. Die Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich untersagt. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-Mails, vor."
-    }
+    "privacyShort": {
+  "title": "Datenschutz",
+  "text": "Der Schutz Ihrer persönlichen Daten liegt uns sehr am Herzen. Detaillierte Informationen über die Art, den Umfang und den Zweck der Erhebung und Verwendung Ihrer Daten, sowie Ihre Rechte und Datenschutzoptionen finden Sie in unserer ausführlichen",
+  "link": "Datenschutzerklärung"
+}
   },
   "privacy": {
     "title": "Datenschutz",

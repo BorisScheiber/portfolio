@@ -2,90 +2,89 @@
 @import "../../styles/mixins.scss";
 
 h3 {
-    font-weight: $font-bold;
+  font-weight: $font-bold;
 }
 
 h4 {
-    margin: 16px 0 8px 0;
-    font-weight: $font-semibold;
+  margin: 16px 0 8px 0;
+  font-weight: $font-semibold;
 }
 
 .title-margin {
-    // margin-bottom: 8px;
-    margin-top: 32px;
+  margin-top: 32px;
 }
 
 .mb-16 {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .mb-32 {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 section {
-    margin-top: 110px;
-    @include section-container();
-    overflow: hidden;
+  margin-top: 110px;
+  @include section-container();
+  overflow: hidden;
 }
 
 .privacy-content {
-    @include content-container($justify: unset, $position: relative);
-    flex-direction: column;
+  @include content-container($justify: unset, $position: relative);
+  flex-direction: column;
 }
 
 .privacy-container {
-    a {
-        color: $secondary-color;
+  a {
+    color: $secondary-color;
 
-        &:hover {
-            text-decoration: underline;
-        }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 
-    ul {
-        list-style-type: disc;
-        padding-left: 20px;
-        margin-top: 16px;
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 16px;
 
-        li {
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
+    li {
+      margin-bottom: 8px;
+      line-height: 1.5;
     }
+  }
 }
 
 .headline {
-    @include dFlex($justify: unset, $gap: 32px);
-    width: 100%;
-    margin-bottom: 60px;
-  
-    span:first-of-type {
-      @include vertical-line($bgcolor: $secondary-color);
-    }
-  
-    span:last-of-type {
-      @include vertical-line($bgcolor: $secondary-color, $width: 300px);
-    }
+  @include dFlex($justify: unset, $gap: 32px);
+  width: 100%;
+  margin-bottom: 60px;
+
+  span:first-of-type {
+    @include vertical-line($bgcolor: $secondary-color);
+  }
+
+  span:last-of-type {
+    @include vertical-line($bgcolor: $secondary-color, $width: 300px);
+  }
 }
 
 .shadow-element {
-    @include shadow-element();
-    bottom: -400px;
-    left: -800px;
-    filter: blur(46.5px);
-    
-    img {
-        transform: rotate(222deg);
-     }
+  @include shadow-element();
+  bottom: -400px;
+  left: -700px;
+  filter: blur(46.5px);
+
+  img {
+    transform: rotate(209deg);
+  }
 }
 
 .shadow-top {
-    top: -70px;
-    left: unset;
-    right: -500px;
+  top: -70px;
+  left: unset;
+  right: -500px;
 
-    img {
-        transform: rotate(222deg);
-     }
+  img {
+    transform: rotate(222deg);
+  }
 }

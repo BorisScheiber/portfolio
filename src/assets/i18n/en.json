@@ -10,5 +10,60 @@
     "developer": "FRONTEND DEVELOPER",
     "letsTalk": "Let's talk!",
     "scrollDown": "Scroll down"
+  },
+  "about": {
+   "title": "About me",
+   "description": "Hi, I'm Boris, a Frontend Developer based near Imst, Austria. I'm inspired by the endless possibilities of technology - creating beautiful, intuitive digital experiences that transform ideas into reality.",
+   "location": "Whether working from home or on-site - I'm open to both work models and appreciate hybrid solutions. For me, flexibility is the key to effective collaboration.",
+   "mindset": "Being naturally curious and open-minded, I embrace challenges that push my boundaries both in my career and personal life. This constant drive to learn and grow fuels my passion for self-improvement in all aspects of life.",
+   "programming": "Programming holds a special place in my heart because it lets me unfold my creativity while embracing my analytical mindset. The ability to create something from scratch, solve complex problems, and constantly learn new technologies fills me with excitement."
+ },
+ "skills": {
+    "title": "My skills",
+    "description": "I have gained experience in building projects with different frontend technologies and concepts.",
+    "lookingFor": "Looking for",
+    "anotherSkill": "another skill",
+    "contact": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "getInTouch": "Get in touch",
+    "continuallyLearning": "Continually learning"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "liveTest": "Live test",
+    "projects": {
+      "join": {
+        "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+      },
+      "elPolloLoco": {
+        "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+      },
+      "pokedex": {
+        "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "problem": "Got a problem to solve?",
+    "description": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "needDev": "Need a Frontend developer?",
+    "contactMe": "Contact me!",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your message",
+      "privacy": "I've read the ",
+      "privacyPolicy": "Privacy policy",
+      "privacyAgree": " and agree to the processing of my data as outlined.",
+      "send": "Send Message :)"
+    }
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "copyright": "© Boris Scheiber 2024"
   }
+
+
+
 }

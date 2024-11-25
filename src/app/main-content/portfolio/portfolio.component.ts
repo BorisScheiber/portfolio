@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Project {
   title: string;
@@ -13,7 +14,7 @@ interface Project {
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -22,7 +23,7 @@ export class PortfolioComponent {
     {
       title: 'Join',
       technologies: 'Javascript | HTML | CSS | Firebase',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'portfolio.projects.join.description',
       image: '/assets/img/joinlaptop.png',
       liveLink: '#',
       githubLink: 'https://github.com/BorisScheiber/join-294'
@@ -30,7 +31,7 @@ export class PortfolioComponent {
     {
       title: 'El Pollo Loco',
       technologies: 'Javascript | HTML | CSS',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: 'portfolio.projects.elPolloLoco.description',
       image: '/assets/img/elpollolocolaptop.png',
       liveLink: '#',
       githubLink: 'https://github.com/BorisScheiber/el-pollo-loco',
@@ -39,7 +40,7 @@ export class PortfolioComponent {
     {
       title: 'Pokédex',
       technologies: 'JavaScript | HTML | CSS | API',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      description: 'portfolio.projects.pokedex.description',
       image: '/assets/img/pokedexlaptop.png',
       liveLink: '#',
       githubLink: 'https://github.com/BorisScheiber/pokedex'

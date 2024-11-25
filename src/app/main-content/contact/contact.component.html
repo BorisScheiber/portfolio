@@ -6,41 +6,40 @@
 
         <div class="headline">
             <span></span>
-            <h1>Contact</h1>
+            <h1>{{ 'contact.title' | translate }}</h1>
         </div>
 
         <div class="contact-container">
 
             <div class="contact-text-container">
-                <h2>Got a problem to solve?</h2>
+                <h2>{{ 'contact.problem' | translate }}</h2>
 
                 <div>
-                    <p>Contact me through this form, I am interested in hearing from you, knowing your ideas and
-                        contributing to your projects with my work.</p>
-                    <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+                    <p>{{ 'contact.description' | translate }}</p>
+                    <p>{{ 'contact.needDev' | translate }} <strong>{{ 'contact.contactMe' | translate }}</strong></p>
                 </div>
             </div>
 
 
             <form class="contact-form">
                 <div>
-                    <input type="text" placeholder="Your Name">
+                    <input type="text" [placeholder]="'contact.form.name' | translate">
                 </div>
                 <div>
-                    <input type="email" placeholder="Your Email">
+                    <input type="email" [placeholder]="'contact.form.email' | translate">
                 </div>
                 <div>
-                    <textarea name="" id="" placeholder="Your message"></textarea>
+                    <textarea name="" id="" [placeholder]="'contact.form.message' | translate"></textarea>
                 </div>
 
                 <label class="privacy-accept">
                     <input type="checkbox" formControlName="privacy" class="custom-checkbox">
-                    <span>I've read the <a routerLink="/privacy-policy">Privacy policy</a> and agree to the processing of my data as outlined.</span>
+                    <span>{{ 'contact.form.privacy' | translate }} <a routerLink="/privacy-policy">{{ 'contact.form.privacyPolicy' | translate }}</a> {{ 'contact.form.privacyAgree' | translate }}</span>
                 </label>
 
                 <div class="send-button">
                     <button type="submit">
-                        Send Message &#58;&#41;
+                        {{ 'contact.form.send' | translate }}
                     </button>
                 </div>
 

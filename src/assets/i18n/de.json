@@ -10,6 +10,60 @@
     "developer": "FRONTEND ENTWICKLER",
     "letsTalk": "Lass uns reden!",
     "scrollDown": "Scroll runter"
+  }, 
+  "about": {
+   "title": "Über mich",
+   "description": "Servus, ich bin Boris, ein Frontend Entwickler in der Nähe von Imst, Österreich. Ich bin inspiriert von den endlosen Möglichkeiten der Technologie - erschaffe schöne, intuitive digitale Erlebnisse, die Ideen in Realität verwandeln.",
+   "location": "Egal ob von zu Hause oder vor Ort - ich bin für beide Arbeitsmodelle offen und schätze hybride Lösungen. Für mich ist Flexibilität der Schlüssel zu effektiver Zusammenarbeit.",
+   "mindset": "Von Natur aus neugierig und aufgeschlossen, stelle ich mich gerne Herausforderungen, die meine Grenzen sowohl im Beruf als auch im Privatleben erweitern. Dieser ständige Drang zu lernen und zu wachsen treibt meine Leidenschaft für Selbstverbesserung in allen Lebensbereichen an.",
+   "programming": "Programmieren hat einen besonderen Platz in meinem Herzen, weil es mir erlaubt, meine Kreativität zu entfalten und gleichzeitig meinen analytischen Verstand einzusetzen. Die Fähigkeit, etwas von Grund auf neu zu erschaffen, komplexe Probleme zu lösen und ständig neue Technologien zu lernen, erfüllt mich mit Begeisterung."
+ },
+ "skills": {
+    "title": "Fähigkeiten",
+    "description": "Ich habe Erfahrung im Erstellen von Projekten mit verschiedenen Frontend-Technologien und Konzepten.",
+    "lookingFor": "Auf der Suche nach einer",
+    "anotherSkill": "anderen Fähigkeit",
+    "contact": "Kontaktiere mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "getInTouch": "Kontaktiere mich",
+    "continuallyLearning": "Kontinuierlich lernen" 
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "liveTest": "Live Test",
+    "projects": {
+      "join": {
+        "description": "Taskmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag & Drop Funktionen, weise Benutzer und Kategorien zu."
+      },
+      "elPolloLoco": {
+        "description": "Jump & Run Spiel basierend auf objektorientierter Programmierung. Hilf Pepe Münzen und Tabasco-Sauce zu finden, um gegen das verrückte Huhn zu kämpfen."
+      },
+      "pokedex": {
+        "description": "Basierend auf der PokéAPI eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "problem": "Ein Problem zu lösen?",
+    "description": "Kontaktiere mich über dieses Formular. Ich freue mich von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
+    "needDev": "Frontend Entwickler gesucht?",
+    "contactMe": "Kontaktiere mich!",
+    "form": {
+      "name": "Dein Name",
+      "email": "Deine E-Mail",
+      "message": "Deine Nachricht",
+      "privacy": "Ich habe die ",
+      "privacyPolicy": "Datenschutzerklärung",
+      "privacyAgree": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+      "send": "Nachricht senden :)"
+    }
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "copyright": "© Boris Scheiber 2024"
   }
+
+
 
 }

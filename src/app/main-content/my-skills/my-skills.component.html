@@ -5,7 +5,8 @@
         <div class="my-skills-list">
             @for (skill of skills; track skill.name) {
             <div>
-                <span>{{ skill.name }}</span>
+                <span>{{ skill.name === 'Continually learning' ? 
+                    ('skills.continuallyLearning' | translate) : skill.name }}</span>
                 <img [src]="skill.icon" [alt]="skill.name">
             </div>
             }
@@ -14,15 +15,15 @@
         <div class="my-skills-text">
 
             <div class="headline">
-                <h1>My skills</h1>
+                <h1>{{ 'skills.title' | translate }}</h1>
                 <span></span>
             </div>
 
             <div class="info">
-                <p>I have gained experience in building projects with different frontend technologies and concepts.</p>
-                <span class="highlight-text">Looking for <span class="skill-text">another skill</span>?</span>
-                <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-                <a href="#contact">Get in touch</a>
+                <p>{{ 'skills.description' | translate }}</p>
+                <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{ 'skills.anotherSkill' | translate }}</span>?</span>
+                <p>{{ 'skills.contact' | translate }}</p>
+                <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
             </div>
 
 

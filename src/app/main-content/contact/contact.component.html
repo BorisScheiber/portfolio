@@ -20,20 +20,20 @@
                 </div>
             </div>
 
-
-            <form class="contact-form">
+            <!-- OLD FORM -->
+            <!-- <form class="contact-form">
                 <div>
-                    <input type="text" [placeholder]="'contact.form.name' | translate">
+                    <input type="text" [placeholder]="'contact.form.name' | translate" required>
                 </div>
                 <div>
-                    <input type="email" [placeholder]="'contact.form.email' | translate">
+                    <input type="email" [placeholder]="'contact.form.email' | translate" required>
                 </div>
                 <div>
-                    <textarea name="" id="" [placeholder]="'contact.form.message' | translate"></textarea>
+                    <textarea name="" id="" [placeholder]="'contact.form.message' | translate" required></textarea>
                 </div>
 
                 <label class="privacy-accept">
-                    <input type="checkbox" formControlName="privacy" class="custom-checkbox">
+                    <input type="checkbox" formControlName="privacy" class="custom-checkbox" required>
                     <span>{{ 'contact.form.privacy' | translate }} <a routerLink="/privacy-policy">{{ 'contact.form.privacyPolicy' | translate }}</a> {{ 'contact.form.privacyAgree' | translate }}</span>
                 </label>
 
@@ -42,8 +42,75 @@
                         {{ 'contact.form.send' | translate }}
                     </button>
                 </div>
+            </form> -->
 
+
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+                <div class="input-container">
+                    <input type="text" 
+                           formControlName="name" 
+                           [placeholder]="'contact.form.name' | translate"
+                           [ngClass]="{
+                               'valid': f['name'].valid && (f['name'].dirty || f['name'].touched),
+                               'invalid': f['name'].invalid && (f['name'].dirty || f['name'].touched)
+                           }">
+                    @if (f['name'].errors?.['required'] && (f['name'].dirty || f['name'].touched)) {
+                        <span class="error-message">Name is required</span>
+                    }
+                    @if (f['name'].errors?.['minlength'] && (f['name'].dirty || f['name'].touched)) {
+                        <span class="error-message">Name must be at least 2 characters long</span>
+                    }
+                </div>
+            
+                <div class="input-container">
+                    <input type="email" 
+                           formControlName="email" 
+                           [placeholder]="'contact.form.email' | translate"
+                           [ngClass]="{
+                               'valid': f['email'].valid && (f['email'].dirty || f['email'].touched),
+                               'invalid': f['email'].invalid && (f['email'].dirty || f['email'].touched)
+                           }">
+                    @if (f['email'].errors?.['required'] && (f['email'].dirty || f['email'].touched)) {
+                        <span class="error-message">Email is required</span>
+                    }
+                    @if (f['email'].errors?.['pattern'] && (f['email'].dirty || f['email'].touched)) {
+                        <span class="error-message">Please enter a valid email address (e.g., test&#64;domain.com)</span>
+                    }
+                </div>
+            
+                <div class="input-container">
+                    <textarea formControlName="message" 
+                              [placeholder]="'contact.form.message' | translate"
+                              [ngClass]="{
+                                  'valid': f['message'].valid && (f['message'].dirty || f['message'].touched),
+                                  'invalid': f['message'].invalid && (f['message'].dirty || f['message'].touched)
+                              }">
+                    </textarea>
+                    @if (f['message'].errors?.['required'] && (f['message'].dirty || f['message'].touched)) {
+                        <span class="error-message">Message is required</span>
+                    }
+                </div>
+            
+                <label class="privacy-accept">
+                    <input type="checkbox" 
+                           formControlName="privacy" 
+                           class="custom-checkbox">
+                    <span>{{ 'contact.form.privacy' | translate }} 
+                        <a routerLink="/privacy-policy">{{ 'contact.form.privacyPolicy' | translate }}</a> 
+                        {{ 'contact.form.privacyAgree' | translate }}
+                    </span>
+                </label>
+            
+                <div class="send-button">
+                    <button type="submit" [disabled]="contactForm.invalid">
+                        {{ 'contact.form.send' | translate }}
+                    </button>
+                </div>
             </form>
+
+
+
+
 
         </div>
 

@@ -58,7 +58,6 @@ header {
 }
 
 
-// Burger-Icon Styles außerhalb von .link
 .burger-icon {
   --burger-width: 34px;
   --burger-height: 24px;
@@ -72,12 +71,7 @@ header {
   width: var(--burger-width);
   height: var(--burger-height);
   padding: 0;
-  margin-left: auto; // Damit es rechts ausgerichtet ist
-  
-  @media (max-width: 900px) {
-    display: block;
-    position: relative;
-  }
+  margin-left: auto;
 }
 
 .line {
@@ -115,4 +109,15 @@ header {
   .line-3 {
     transform: translateY(calc(var(--translate-value) * -1)) rotate(-45deg);
   }
+}
+
+@media (max-width: 900px) {
+ .burger-icon {
+  display: block;
+  position: relative;
+ }
+
+ .menu {
+  display: none;
+ }
 }

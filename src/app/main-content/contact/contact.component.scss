@@ -39,11 +39,53 @@ section {
   justify-content: space-evenly;
 }
 
+// .contact-form {
+//   width: 617px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 32px;
+
+//   input,
+//   textarea {
+//     width: 100%;
+//     padding: 15px 25px 15px 25px;
+//     border-radius: 10px;
+//     background-color: transparent;
+//     border: 1px solid $secondary-color;
+//     color: white;
+//     font-size: 16px;
+
+//     &::placeholder {
+//       color: white;
+//       opacity: 1;
+//       font-weight: 400;
+//       font-size: 16px;
+//     }
+
+//     &:focus-visible {
+//       outline: none;
+//       border: 1px solid $primary-color;
+//     }
+//   }
+
+//   input {
+//     height: 50px;
+//   }
+
+//   textarea {
+//     height: 202px;
+//     resize: none;
+//   }
+// }
+
+
+
+
 .contact-form {
   width: 617px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 34px;
 
   input,
   textarea {
@@ -62,9 +104,35 @@ section {
       font-size: 16px;
     }
 
+    // Basis Focus-Zustand (wenn User reinklickt)
     &:focus-visible {
       outline: none;
       border: 1px solid $primary-color;
+      background-color: #141D2F;
+    }
+
+    // Validierungszustände (nach Eingabe/Berührung)
+    &.valid {
+      border-color: #70E61C !important;
+      background-image: url(../../../assets/img/icons/valid.svg);
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 25px;
+      background-color: #141D2F;
+    }
+
+    &.invalid {
+      border-color: #E61C40 !important;
+      background-image: url(../../../assets/img/icons/invalid.svg);
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 25px;
+      background-color: #141D2F;
+    }
+
+    // Wenn ein valides Feld fokussiert wird
+    &.valid:focus-visible {
+      border-color: #70E61C !important;
     }
   }
 
@@ -75,8 +143,65 @@ section {
   textarea {
     height: 202px;
     resize: none;
+
+    &.valid,
+    &.invalid {
+      background-position: right 16px top 16px;
+    }
   }
 }
+
+.error-message {
+  color: #E61C40;
+  font-size: 14px;
+  // margin-top: 10px;
+  display: block;
+  position: absolute;
+  bottom: -24px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .privacy-accept {
   display: flex;
@@ -88,7 +213,7 @@ section {
     border: unset;
     appearance: none;
     height: 24px;
-    width: 24px;
+    width: 24px ;
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
@@ -126,6 +251,15 @@ section {
 
   button {
     @include primary-button();
+
+    &:disabled {
+      background-color: #B6B6B6;
+      cursor: default;
+
+      &:hover {
+        transform: none; 
+      }
+    }
   }
 }
 

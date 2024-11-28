@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageSwitchComponent } from '../ui/language-switch/language-switch.component';
@@ -23,31 +23,14 @@ import { animate, style, transition, trigger } from '@angular/animations';
     ])
   ]
 })
-export class MobileNavOverlayComponent {
+export class MobileNavOverlayComponent implements OnChanges {
 
-
-  // Ist für overflow hidden beim öffnen des Menüs zuständig
-
-  private _isMenuOpen = false;
-  @Output() closeOverlay = new EventEmitter<void>();
-  
-  @Input() set isMenuOpen(value: boolean) {
-    document.body.style.overflow = value ? 'hidden' : 'auto';
-    this._isMenuOpen = value;
-  }
-  get isMenuOpen(): boolean {
-    return this._isMenuOpen;
-  }
-
-// Kommentiere das aus und kommentiere das obere aus wenn overflow egal ist
-// und nicht vergessen beim hostlistener wieder isMenuOpen
-
-// @Input() isMenuOpen = false;
-// @Output() closeOverlay = new EventEmitter<void>();
+@Input() isMenuOpen = false;
+@Output() closeOverlay = new EventEmitter<void>();
 
 @HostListener('window:resize')
 onResize() {
-  if (window.innerWidth >= 900 && this._isMenuOpen) {
+  if (window.innerWidth >= 900 && this.isMenuOpen) {
     this.closeOverlay.emit();
   }
 }
@@ -55,6 +38,11 @@ onResize() {
 constructor(private router: Router) {}
 
 
+ngOnChanges(changes: SimpleChanges) {
+if (changes['isMenuOpen']) {
+  document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
+}
+}
 
 
 mobileNavigateTo(sectionId: string) {
@@ -69,6 +57,8 @@ mobileNavigateTo(sectionId: string) {
   }
   this.closeOverlay.emit();
 }
+
+
 
 private scrollToElement(sectionId: string) {
   const element = document.getElementById(sectionId);

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class LogoComponent {
  @Input() fontSize: string = '32px';
  @Input() minWidth: string = '145px';
+ @Input() isMenuOpen = false;
+ @Output() closeMenu = new EventEmitter<void>();
 
  constructor(private router: Router) {}
 
@@ -21,6 +23,9 @@ export class LogoComponent {
     });
   } else {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  if (this.isMenuOpen) {
+    this.closeMenu.emit();
   }
  }
 }

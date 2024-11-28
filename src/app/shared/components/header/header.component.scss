@@ -18,6 +18,7 @@ header {
     max-width: $max-width;  
     width: 100%;
     display: flex;
+    align-items: center;
 }
 
 .menu {
@@ -53,5 +54,65 @@ header {
 
   &:hover {
     color: $primary-color;
+  }
+}
+
+
+// Burger-Icon Styles außerhalb von .link
+.burger-icon {
+  --burger-width: 34px;
+  --burger-height: 24px;
+  --line-thickness: 2px;
+  --translate-value: calc((var(--burger-height) - var(--line-thickness)) / 2);
+
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  padding: 0;
+  margin-left: auto; // Damit es rechts ausgerichtet ist
+  
+  @media (max-width: 900px) {
+    display: block;
+    position: relative;
+  }
+}
+
+.line {
+  position: absolute;
+  height: var(--line-thickness);
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+  left: 0;
+  border-radius: 2px;
+}
+
+.line-1 {
+  top: 0;
+}
+
+.line-2 {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-3 {
+  bottom: 0;
+}
+
+.burger-icon.open {
+  .line-1 {
+    transform: translateY(var(--translate-value)) rotate(45deg);
+  }
+  
+  .line-2 {
+    opacity: 0;
+  }
+  
+  .line-3 {
+    transform: translateY(calc(var(--translate-value) * -1)) rotate(-45deg);
   }
 }

@@ -1,4 +1,5 @@
-<app-header></app-header>
+<app-header [isMenuOpen]="isMenuOpen" (toggleMenuEvent)="toggleMenu()"></app-header>
+<app-mobile-nav-overlay [isMenuOpen]="isMenuOpen" (closeOverlay)="toggleMenu()"></app-mobile-nav-overlay>
 
 <router-outlet />
 

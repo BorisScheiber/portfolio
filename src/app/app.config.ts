@@ -4,6 +4,8 @@ import { routes } from './app.routes';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideAnimations } from '@angular/platform-browser/animations';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -13,6 +15,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    provideAnimations(),
     importProvidersFrom(HttpClientModule),
     importProvidersFrom(
       TranslateModule.forRoot({

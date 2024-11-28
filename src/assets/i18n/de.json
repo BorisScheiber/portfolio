@@ -4,6 +4,13 @@
     "skills": "Skills",
     "portfolio": "Portfolio"
   },
+  
+  "mobileNavOverlay": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
 
   "landing": {
     "iam": "Ich bin",

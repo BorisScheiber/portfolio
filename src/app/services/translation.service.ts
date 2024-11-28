@@ -1,6 +1,7 @@
 // src/app/services/translation.service.ts
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,10 @@ export class TranslationService {
 
   getCurrentLanguage(): string {
     return this.translate.currentLang;
+  }
+
+  // Neue Methode für Language-Change-Events
+  onLanguageChange(): Observable<any> {
+    return this.translate.onLangChange;
   }
 }

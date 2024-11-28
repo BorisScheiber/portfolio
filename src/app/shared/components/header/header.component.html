@@ -1,12 +1,20 @@
 <header>
     <div class="header-content">
-    <app-logo></app-logo>
+    <app-logo [isMenuOpen]="isMenuOpen" (closeMenu)="toggleMenu()"></app-logo>
     <div class="menu">
         <a class="link" [routerLink]="['']" (click)="scrollToSection('about-me', $event)">{{ 'header.about' | translate }}</a>
         <a class="link" [routerLink]="['']" (click)="scrollToSection('skills', $event)">{{ 'header.skills' | translate }}</a>
         <a class="link" [routerLink]="['']" (click)="scrollToSection('portfolio', $event)">{{ 'header.portfolio' | translate }}</a>
-
         <app-language-switch></app-language-switch>
     </div>
+
+    <button class="burger-icon" (click)="toggleMenu()" [class.open]="isMenuOpen">
+        <div class="burger-lines">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </div>
+    </button>
+    
     </div>
 </header>

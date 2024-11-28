@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { LogoComponent } from '../ui/logo/logo.component';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
@@ -15,7 +15,15 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HeaderComponent {
 
+  @Input() isMenuOpen = false;
+  @Output() toggleMenuEvent = new EventEmitter<void>();
+
   constructor(private router: Router) {}
+
+
+  toggleMenu() {
+    this.toggleMenuEvent.emit();
+  }
 
 
 

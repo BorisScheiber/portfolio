@@ -5,6 +5,13 @@
     "portfolio": "Portfolio"
   },
 
+  "mobileNavOverlay": {
+    "about": "About me",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+
   "landing": {
     "iam": "I am",
     "developer": "FRONTEND DEVELOPER",

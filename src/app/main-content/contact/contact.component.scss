@@ -39,47 +39,6 @@ section {
   justify-content: space-evenly;
 }
 
-// .contact-form {
-//   width: 617px;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 32px;
-
-//   input,
-//   textarea {
-//     width: 100%;
-//     padding: 15px 25px 15px 25px;
-//     border-radius: 10px;
-//     background-color: transparent;
-//     border: 1px solid $secondary-color;
-//     color: white;
-//     font-size: 16px;
-
-//     &::placeholder {
-//       color: white;
-//       opacity: 1;
-//       font-weight: 400;
-//       font-size: 16px;
-//     }
-
-//     &:focus-visible {
-//       outline: none;
-//       border: 1px solid $primary-color;
-//     }
-//   }
-
-//   input {
-//     height: 50px;
-//   }
-
-//   textarea {
-//     height: 202px;
-//     resize: none;
-//   }
-// }
-
-
-
 
 .contact-form {
   width: 617px;
@@ -92,7 +51,7 @@ section {
     width: 100%;
     padding: 15px 25px 15px 25px;
     border-radius: 10px;
-    background-color: transparent;
+    background-color: #141D2F;
     border: 1px solid $secondary-color;
     color: white;
     font-size: 16px;
@@ -118,7 +77,6 @@ section {
       background-repeat: no-repeat;
       background-position: right 16px center;
       background-size: 25px;
-      background-color: #141D2F;
     }
 
     &.invalid {
@@ -127,13 +85,9 @@ section {
       background-repeat: no-repeat;
       background-position: right 16px center;
       background-size: 25px;
-      background-color: #141D2F;
     }
 
-    // Wenn ein valides Feld fokussiert wird
-    &.valid:focus-visible {
-      border-color: #70E61C !important;
-    }
+    
   }
 
   input {
@@ -154,6 +108,7 @@ section {
 .error-message {
   color: #E61C40;
   font-size: 14px;
+  line-height: 16.8px;
   // margin-top: 10px;
   display: block;
   position: absolute;
@@ -167,45 +122,10 @@ section {
   position: relative;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .privacy-accept {
   display: flex;
   align-items: center;
+  position: relative;
 
   input {
     margin-right: 8px;

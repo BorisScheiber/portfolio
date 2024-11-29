@@ -55,7 +55,7 @@
                                'invalid': f['name'].invalid && (f['name'].dirty || f['name'].touched)
                            }">
                     @if (f['name'].errors?.['required'] && (f['name'].dirty || f['name'].touched)) {
-                        <span class="error-message">Name is required</span>
+                        <span class="error-message">Your name is required</span>
                     }
                     @if (f['name'].errors?.['minlength'] && (f['name'].dirty || f['name'].touched)) {
                         <span class="error-message">Name must be at least 2 characters long</span>
@@ -71,7 +71,7 @@
                                'invalid': f['email'].invalid && (f['email'].dirty || f['email'].touched)
                            }">
                     @if (f['email'].errors?.['required'] && (f['email'].dirty || f['email'].touched)) {
-                        <span class="error-message">Email is required</span>
+                        <span class="error-message">Your email is required</span>
                     }
                     @if (f['email'].errors?.['pattern'] && (f['email'].dirty || f['email'].touched)) {
                         <span class="error-message">Please enter a valid email address (e.g., test&#64;domain.com)</span>
@@ -87,7 +87,7 @@
                               }">
                     </textarea>
                     @if (f['message'].errors?.['required'] && (f['message'].dirty || f['message'].touched)) {
-                        <span class="error-message">Message is required</span>
+                        <span class="error-message">Your message is empty</span>
                     }
                 </div>
             
@@ -99,6 +99,9 @@
                         <a routerLink="/privacy-policy">{{ 'contact.form.privacyPolicy' | translate }}</a> 
                         {{ 'contact.form.privacyAgree' | translate }}
                     </span>
+                    @if (!f['privacy'].value && f['name'].valid && f['email'].valid && f['message'].valid) {
+                        <span class="error-message">Please accept the privacy policy</span>
+                    }
                 </label>
             
                 <div class="send-button">

@@ -18,9 +18,9 @@ export class ContactComponent {
   
   contactForm!: FormGroup;
   submitted = false;
-  mailTest = true; // Von deiner Vorlage
+  mailTest = true; 
 
-  // Mail-Konfiguration von deiner Vorlage
+ 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -48,7 +48,6 @@ export class ContactComponent {
       const formData = this.contactForm.value;
       
       if (!this.mailTest) {
-        // Scharfer Versand
         this.http.post(this.post.endPoint, this.post.body(formData))
           .subscribe({
             next: (response) => {

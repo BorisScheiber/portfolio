@@ -68,3 +68,63 @@ section {
   top: -400px;
   filter: blur(46.5px);
 }
+
+@media (max-width: 1600px) {
+
+  section {
+    padding-left: 100px;
+  }
+
+  .profile-img-container {
+
+    div {
+      width: 400px;
+      height: 400px;
+    }
+
+    span {
+      width: 200px;
+    }
+  }
+  
+}
+
+@media (max-width: 1450px) {
+  .profile-img-container {
+
+    div {
+      width: 400px;
+      height: 400px;
+    }
+
+    span {
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .about-me-description {
+    max-width: 480px;
+  }
+
+  .profile-img-container {
+    span {
+      width: 100px;
+    }
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .profile-img-container {
+    display: none;
+  }
+
+  .about-me-description {
+    max-width: unset;
+  }
+  section {
+    padding-right: 100px;
+  }
+}

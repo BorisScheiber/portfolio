@@ -15,6 +15,7 @@ section {
   flex-wrap: wrap;
   gap: 54px;
   max-width: 650px;
+  margin-top: 22px;
 
   div {
     @include dFlex();
@@ -114,4 +115,22 @@ section {
     @include shadow-element();
     left: -600px;
     bottom: -700px;
+}
+
+@media (max-width: 1600px) {
+  section {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1350px) {
+  .my-skills-list {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .my-skills-list {
+    gap: 40px;
+  }
 }

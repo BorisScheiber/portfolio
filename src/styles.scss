@@ -69,3 +69,12 @@ p {
 // ::-webkit-scrollbar {
 //   display: none; 
 // }
+
+
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 80px;
+    font-weight: $font-bold;
+    line-height: 96px;
+  }
+}

@@ -2,7 +2,7 @@
 @import "../../../styles/mixins.scss";
 
 section {
-    @include section-container();
+  @include section-container();
 }
 
 .my-skills-content {
@@ -66,55 +66,64 @@ section {
 }
 
 .my-skills-text {
-    display: flex;
-    gap: 32px;
-    flex-direction: column;
-    max-width: 571px;
-
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  max-width: 571px;
 }
 
 .headline {
+  @include dFlex($justify: flex-end, $gap: 32px);
 
-    @include dFlex($justify: flex-end, $gap: 32px);
-
-
-    span {
-        @include vertical-line($width: 100px, $bgcolor: $primary-color);
-      }
+  span {
+    @include vertical-line($width: 100px, $bgcolor: $primary-color);
+  }
 }
 
 .info {
-    @include dFlex($align: flex-end, $gap: 16px);
-    flex-direction: column;
-    text-align: right;
-    margin-right: 132px;
-   
+  @include dFlex($align: flex-end, $gap: 16px);
+  flex-direction: column;
+  text-align: right;
+  margin-right: 132px;
 
-    a {
-        @include primary-button;
-        max-width: fit-content;
-        margin-top: 24px;
-    }
+  a {
+    @include primary-button;
+    max-width: fit-content;
+    margin-top: 24px;
+  }
 
-    p:first-of-type {
-        margin-bottom: 8px;
-    }
-    
-    .highlight-text {
-        font-size: 32px;
-        line-height: 38.4px;
-        font-weight: $font-bold;
+  p:first-of-type {
+    margin-bottom: 8px;
+  }
 
-        .skill-text {
-            color: $secondary-color;
-        }
+  .highlight-text {
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: $font-bold;
+
+    .skill-text {
+      color: $secondary-color;
     }
+  }
 }
 
 .shadow-element {
-    @include shadow-element();
-    left: -600px;
-    bottom: -700px;
+  @include shadow-element();
+  left: -600px;
+  bottom: -700px;
+}
+
+.info-mobile {
+  display: none;
+}
+
+.link-mobile {
+  display: none;
+  margin-top: 24px;
+  a {
+    @include primary-button;
+    max-width: fit-content;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -132,5 +141,67 @@ section {
 @media (max-width: 1200px) {
   .my-skills-list {
     gap: 40px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .my-skills-content {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .info {
+    a {
+      display: none;
+    }
+
+    p:last-of-type {
+      display: none;
+    }
+  }
+
+  .highlight-text {
+    display: none;
+  }
+
+  .my-skills-list {
+    max-width: unset;
+    gap: 54px;
+  }
+  .my-skills-list {
+    justify-content: center;
+    margin-right: 100px;
+    margin-top: 60px;
+  }
+  .my-skills-text {
+    max-width: unset;
+  }
+
+  .info-mobile {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-right: 0;
+    padding-right: 100px;
+
+    a {
+      display: block;
+      margin-top: 80px;
+    }
+
+    // p:last-of-type {
+    //   display: block;
+    // }
+    // .highlight-text {
+    //   display: block;
+    // }
+  }
+
+  // .link-mobile {
+  //   display: inline-flex;
+  // }
+
+  .shadow-element {
+    bottom: -500px;
   }
 }

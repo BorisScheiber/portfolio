@@ -17,9 +17,11 @@ section {
   width: 100%;
   margin-bottom: 40px;
 
+  div {
   span:first-of-type {
     @include vertical-line($bgcolor: $secondary-color);
   }
+}
 
   span:last-of-type {
     @include vertical-line($bgcolor: $secondary-color, $width: 507px);
@@ -83,4 +85,46 @@ section {
   right: -400px;
   top: 600px;
   filter: blur(46.5px);
+}
+
+
+@media (max-width: 1600px) {
+  .headline {
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .second-seperator {
+      max-width: 507px;
+      width: 100% !important;
+    }
+  }
+}
+
+
+@media (max-width: 1550px) {
+  .projects-container {
+    padding: 0 90px 0 90px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .single-project {
+    flex-direction: column;
+    gap: unset;
+    margin-bottom: 50px;
+  }
+  .project-descritpion {
+    align-items: center;
+    text-align: center;
+    margin-top: -50px;
+  }
+  .project-links {
+    justify-content: center;
+    // gap: 50px;
+  }
+  .shadow-element {
+    right: -200px;
+  }
 }

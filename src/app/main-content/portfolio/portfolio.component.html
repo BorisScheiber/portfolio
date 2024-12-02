@@ -3,9 +3,11 @@
   <main class="portfolio-content">
 
     <div class="headline">
-      <span></span>
+      <div>
+        <span></span>
+      </div>
       <h1>{{ 'portfolio.title' | translate }}</h1>
-      <span></span>
+      <span class="second-seperator"></span>
     </div>
 
     <div>
@@ -27,7 +29,8 @@
             <p>{{ project.description | translate }}</p>
           </div>
           <div class="project-links">
-            <a [href]="project.liveLink" target="_blank" rel="noopener noreferrer">{{ 'portfolio.liveTest' | translate }}</a>
+            <a [href]="project.liveLink" target="_blank" rel="noopener noreferrer">{{ 'portfolio.liveTest' | translate
+              }}</a>
             <a [href]="project.githubLink" target="_blank" rel="noopener noreferrer">Github</a>
           </div>
         </div>

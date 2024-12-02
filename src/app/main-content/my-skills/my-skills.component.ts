@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -9,7 +10,7 @@ interface Skill {
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })

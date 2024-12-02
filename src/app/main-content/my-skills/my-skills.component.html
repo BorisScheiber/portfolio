@@ -2,6 +2,19 @@
 
     <main class="my-skills-content">
 
+        <!-- <div class="link-mobile">
+            <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
+        </div> -->
+
+        <div class="info info-mobile">
+            <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{ 'skills.anotherSkill' | translate }}</span>?</span>
+                <p>{{ 'skills.contact' | translate }}</p>
+                <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
+        </div>
+
+
+
+
         <div class="my-skills-list">
             @for (skill of skills; track skill.name) {
             <div>

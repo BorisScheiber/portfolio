@@ -34,3 +34,25 @@ footer {
      }
 }
 
+.imprint-link-mobile {
+    display: none;
+}
+
+
+@media (max-width: 950px) {
+    footer {
+        height: 350px;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .imprint-link-mobile {
+        display: inline;
+    }
+    .imprint-info {
+        a {
+            display: none;
+        }
+    }
+}

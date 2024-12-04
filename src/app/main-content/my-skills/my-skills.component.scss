@@ -207,7 +207,7 @@ section {
 }
 
 @media (max-width: 900px) {
- section {
+  section {
     padding-left: 50px;
     padding-bottom: 50px;
   }
@@ -232,5 +232,40 @@ section {
   }
   .my-skills-list {
     gap: 44px;
+  }
+}
+
+@media (max-width: 550px) {
+  .headline {
+    gap: 16px;
+    span {
+      width: 25px;
+    }
+  }
+  .info {
+    margin-right: 41px;
+  }
+  .my-skills-list {
+    margin-right: 25px;
+  }
+  .info-mobile {
+    margin-right: 0;
+    padding-right: 25px;
+  }
+  section {
+    padding-left: 25px;
+  }
+  .my-skills-list {
+    div {
+      width: 100px;
+      img {
+        width: 48px;
+        height: 48px;
+      }
+      span {
+        padding-top: 12px;
+        font-size: 14px;
+      }
+    }
   }
 }

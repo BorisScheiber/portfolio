@@ -127,3 +127,9 @@ header {
     padding: 37px 50px 37px 50px;
   } 
 }
+
+@media (max-width: 550px) {
+  header {
+    padding: 37px 25px 37px 25px;
+  } 
+}

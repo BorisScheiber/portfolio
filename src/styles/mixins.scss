@@ -35,6 +35,10 @@
     background-color: $secondary-color;
     transform: scaleY(1.2) scaleX(1.2);
   }
+
+  @media (max-width: 550px) {
+    font-size: 20px;
+  }
 }
 
 @mixin secondary-button(

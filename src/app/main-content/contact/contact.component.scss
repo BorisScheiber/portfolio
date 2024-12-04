@@ -298,3 +298,22 @@ section {
     width: 100%;
   }
 }
+
+@media (max-width: 550px) {
+  .headline {
+    gap: 16px;
+    margin-bottom: 40px;
+    span {
+      max-width: 25px;
+    }
+  }
+  .contact-container {
+    padding: 0 25px 0 25px;
+  }
+  .contact-text-container {
+    margin-left: 16px;
+  }
+  .go-up-button {
+    padding-right: 25px;
+  }
+}

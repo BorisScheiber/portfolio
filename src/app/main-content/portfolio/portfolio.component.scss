@@ -130,6 +130,15 @@ section {
 }
 
 @media (max-width: 900px) {
+  .headline {
+    gap: 24px;
+
+    div {
+      span:first-of-type {
+        width: 50px;
+      }
+    }
+  }
 
   .subtitle {
     padding: 0 50px 0 50px;
@@ -144,5 +153,34 @@ section {
 @media (max-width: 800px) {
   .project-imagebox {
     height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .headline {
+    gap: 16px;
+    div {
+      span:first-of-type {
+        width: 25px;
+      }
+    }
+  }
+  .subtitle {
+    padding: 0 25px 0 25px;
+  }
+  .projects-container {
+    padding: 0 25px 0 25px;
+  }
+  .project-imagebox {
+    height: 350px;
+  }
+  .project-links {
+    gap: 50px;
+  }
+  .project-descritpion {
+    margin-top: -40px;
+  }
+  .shadow-element {
+    top: 400px;
   }
 }

@@ -205,3 +205,32 @@ section {
     bottom: -500px;
   }
 }
+
+@media (max-width: 900px) {
+ section {
+    padding-left: 50px;
+    padding-bottom: 50px;
+  }
+
+  .headline {
+    gap: 24px;
+    span {
+      width: 50px;
+    }
+  }
+
+  .info {
+    margin-right: 74px;
+  }
+
+  .my-skills-list {
+    margin-right: 50px;
+  }
+  .info-mobile {
+    margin-right: 0;
+    padding-right: 50px;
+  }
+  .my-skills-list {
+    gap: 44px;
+  }
+}

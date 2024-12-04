@@ -198,3 +198,42 @@ section {
   left: -160px;
  }
 }
+
+@media (max-width: 1450px) and (max-height: 1200px) {
+  .imagebox {
+    height: 600px;
+   }
+   .bg-shape {
+    height: 63%;
+   }
+}
+
+@media (max-width: 950px) {
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing-content {
+    padding: 0 50px 0 50px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 64px;
+    font-weight: $font-bold;
+    line-height: 76.8px;
+  }
+  .dev-text {
+    font-size: 42px;
+    line-height: 59px;
+  }
+
+  .rotate-text {
+    font-size: 48px;
+  }
+
+}

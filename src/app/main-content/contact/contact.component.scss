@@ -137,6 +137,7 @@ section {
     appearance: none;
     height: 24px;
     width: 24px ;
+    min-width: 24px;
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
@@ -267,5 +268,33 @@ section {
   }
   .custom-checkbox {
     border-radius: 6px !important;
+  }
+  .shadow-element {
+    top: 400px;
+    left: -500px;
+  }
+}
+
+@media (max-width: 900px) {
+  .headline {
+    gap: 24px;
+    span {
+      max-width: 50px;
+    }
+  }
+  .contact-container {
+    padding: 0 50px 0 50px;
+  }
+  .contact-text-container {
+    margin-left: 24px;
+  }
+  .go-up-button {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-form {
+    width: 100%;
   }
 }

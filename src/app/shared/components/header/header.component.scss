@@ -121,3 +121,9 @@ header {
   display: none;
  }
 }
+
+@media (max-width: 900px) {
+  header {
+    padding: 37px 50px 37px 50px;
+  } 
+}

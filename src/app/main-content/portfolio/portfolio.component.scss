@@ -105,7 +105,7 @@ section {
 
 @media (max-width: 1550px) {
   .projects-container {
-    padding: 0 90px 0 90px;
+    padding: 0 100px 0 100px;
   }
 }
 
@@ -126,5 +126,23 @@ section {
   }
   .shadow-element {
     right: -200px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .subtitle {
+    padding: 0 50px 0 50px;
+    text-align: center;
+  }
+
+  .projects-container {
+    padding: 0 50px 0 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .project-imagebox {
+    height: 400px;
   }
 }

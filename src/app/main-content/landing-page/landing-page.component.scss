@@ -294,3 +294,113 @@ section {
     padding: 0 25px 0 25px;
   }
 }
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 44px;
+    line-height: 48.8px;
+
+    &:lang(de) {
+      line-height: 52.8px;
+    }
+  }
+  .dev-text {
+    font-size: 30px;
+    line-height: 41px;
+
+    &:lang(de) {
+      font-size: 29px;
+    }
+  }
+
+  .rotate-text {
+    font-size: 33px;
+    line-height: 44.8px;
+
+    &:lang(de) {
+      font-size: 23px;
+      line-height: 42px;
+    }
+  }
+  .imagebox {
+    height: 500px;
+  }
+ 
+  .shadow {
+    left: -83px;
+    max-height: 550px;
+    top: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 38px;
+    line-height: 45.8px;
+
+    &:lang(de) {
+      line-height: 46.8px;
+    }
+  }
+  .dev-text {
+    font-size: 25px;
+    line-height: 36px;
+
+    &:lang(de) {
+      font-size: 25px;
+      line-height: 37px;
+    }
+  }
+
+  .rotate-text {
+    font-size: 29px;
+    line-height: 38.8px;
+
+    &:lang(de) {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  }
+  .imagebox {
+    height: 450px;
+  }
+  .bg-shape {
+    height: 72%;
+  }
+}
+
+@media (max-width: 370px) {
+  h1 {
+    font-size: 38px;
+    line-height: 45.8px;
+
+    &:lang(de) {
+      line-height: 46.8px;
+    }
+  }
+  .dev-text {
+    font-size: 25px;
+    line-height: 36px;
+
+    &:lang(de) {
+      font-size: 25px;
+      line-height: 37px;
+    }
+  }
+
+  .rotate-text {
+    font-size: 29px;
+    line-height: 38.8px;
+
+    &:lang(de) {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  }
+  .imagebox {
+    height: 400px;
+  }
+  .bg-shape {
+    height: 72%;
+  }
+}

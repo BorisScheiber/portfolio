@@ -269,3 +269,26 @@ section {
     }
   }
 }
+
+@media (max-width: 480px) {
+  section {
+    padding-top: 75px;
+  }
+}
+
+@media (max-width: 437px) {
+  .info-mobile {
+    a {
+      margin-top: 60px;
+    }
+  }
+  .shadow-element {
+    bottom: -300px;
+  }
+}
+
+@media (max-width: 370px) {
+  .headline {
+    gap: 8px;
+  }
+}

@@ -56,3 +56,21 @@ footer {
         }
     }
 }
+
+@media (max-width: 480px) {
+    footer {
+        padding: 0;
+    }
+    .imprint-info {
+        span {
+            font-size: 20px;
+        }
+    }
+    app-logo {
+        ::ng-deep {
+            .logo {
+                font-size: 44px !important;
+            }
+        }
+    }
+}

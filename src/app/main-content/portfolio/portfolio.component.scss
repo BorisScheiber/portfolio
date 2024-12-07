@@ -113,7 +113,7 @@ section {
   .single-project {
     flex-direction: column;
     gap: unset;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   .project-descritpion {
     align-items: center;
@@ -181,6 +181,34 @@ section {
     margin-top: -40px;
   }
   .shadow-element {
-    top: 400px;
+    top: 473px;
+    right: -250px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-top: 75px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-imagebox {
+    height: 320px;
+  }
+  .shadow-element {
+    right: -330px;
+  }
+}
+
+@media (max-width: 370px) {
+  .project-links {
+    gap: 25px;
+  }
+  .headline {
+    gap: 8px;
+  }
+  .project-imagebox {
+    height: 300px;
   }
 }

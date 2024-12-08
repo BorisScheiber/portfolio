@@ -21,6 +21,8 @@ section {
   margin-top: 110px;
   @include section-container();
   overflow: hidden;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .imprint-content {
@@ -43,12 +45,12 @@ section {
   width: 100%;
   margin-bottom: 60px;
 
-  span:first-of-type {
-    @include vertical-line($bgcolor: $secondary-color);
-  }
+  // span:first-of-type {
+  //   @include vertical-line($bgcolor: $secondary-color);
+  // }
 
   span:last-of-type {
-    @include vertical-line($bgcolor: $secondary-color, $width: 300px);
+    @include vertical-line($bgcolor: $secondary-color, $width: 100px);
   }
 }
 
@@ -63,4 +65,54 @@ section {
   top: -70px;
   left: unset;
   right: -500px;
+}
+
+.word-break {
+  word-break: break-word;
+}
+
+@media (max-width: 900px) {
+  section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .headline {
+    gap: 24px;
+
+    span:last-of-type {
+      width: 50px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .headline {
+    gap: 16px;
+
+    span:last-of-type {
+      width: 25px;
+    }
+  }
+
+  .imprint-container {
+    h2 {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+section {
+  padding-top: 75px;
+}
+}
+
+@media (max-width: 370px) {
+.headline {
+  gap: 8px;
+}
 }

@@ -63,7 +63,17 @@
       "privacy": "I've read the ",
       "privacyPolicy": "Privacy policy",
       "privacyAgree": " and agree to the processing of my data as outlined.",
-      "send": "Send Message :)"
+      "send": "Send Message :)",
+      "errors": {
+        "nameRequired": "Your name is required",
+        "nameMinLength": "Minimum 2 characters long",
+        "emailRequired": "Your email is required",
+        "emailPattern": "Example: name@testdomain.com",
+        "messageEmpty": "Your message is empty",
+        "messageMinLength": "Minimum 4 characters long",
+        "messageMaxLength": "Maximum 1000 characters allowed",
+        "privacyRequired": "Please accept the privacy policy"
+      }
     }
   },
   "footer": {

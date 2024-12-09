@@ -19,7 +19,7 @@ section {
 
 .imagebox {
   position: relative;
-  height: max-content;
+  // height: max-content;
   //   margin-left: 47px;
   z-index: -7;
   height: 700px;
@@ -174,6 +174,12 @@ section {
   }
 }
 
+@media (max-height: 1100px) {
+  .landing-content {
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 1450px) {
   .landing-content {
     flex-direction: column;
@@ -202,6 +208,12 @@ section {
 
   .shadow {
     left: -160px;
+  }
+
+  .info-container {
+    max-height: unset;
+    height: 100%;
+    margin-top: -140px;
   }
 }
 
@@ -252,12 +264,6 @@ section {
   }
 }
 
-@media (max-width: 800px) and (max-height: 1100px) {
-  .info-container {
-    margin-top: -50px;
-  }
-}
-
 @media (max-width: 650px) {
   h1 {
     font-size: 56px;
@@ -277,11 +283,11 @@ section {
       line-height: 51px;
     }
   }
-  .info-container {
-    margin-top: unset;
-  }
   .bg-shape {
     height: 64%;
+  }
+  .info-container {
+    margin-top: -180px;
   }
 }
 
@@ -312,9 +318,9 @@ section {
   }
 }
 
-@media (max-width: 580px) and (max-height: 1200px) {
+@media (max-width: 580px) and (max-height: 1100px) {
   .bg-shape {
-    height: 69%;
+    height: 67%;
   }
 }
 
@@ -340,6 +346,12 @@ section {
     left: -70px;
     max-height: 600px;
     top: 0;
+  }
+}
+
+@media (max-width: 550px) and (max-height: 1100px) {
+  .bg-shape {
+    height: 65%;
   }
 }
 
@@ -385,10 +397,7 @@ section {
   }
 }
 
-@media (max-width: 480px) and (max-height: 1020px) {
-  .info-container {
-    margin-top: -40px;
-  }
+@media (max-width: 480px) and (max-height: 1100px) {
   .bg-shape {
     height: 68%;
   }
@@ -462,9 +471,12 @@ section {
   .bg-shape {
     height: 67%;
   }
+  .info-container {
+    margin-top: -150px;
+  }
 }
 
-@media (max-width: 380px) and (max-height: 1020px) {
+@media (max-width: 380px) and (max-height: 1100px) {
   .bg-shape {
     height: 70%;
   }
@@ -498,7 +510,6 @@ section {
 @media (max-width: 380px) and (max-height: 730px) {
   .info-container {
     gap: 16px;
-    margin-top: -60px;
   }
 }
 
@@ -514,9 +525,6 @@ section {
 }
 
 @media (max-width: 380px) and (max-height: 680px) {
-  .info-container {
-    margin-top: -80px;
-  }
   .bg-shape {
     height: 78%;
   }
@@ -574,21 +582,24 @@ section {
   }
 }
 
-@media (max-width: 370px) and (max-height: 950px) {
+@media (max-width: 370px) and (max-height: 1050px) {
   .bg-shape {
-    height: 75%;
+    height: 72%;
   }
 }
 
 @media (max-width: 370px) and (max-height: 900px) {
   .bg-shape {
     height: 82%;
+    img {
+      height: 84%;
+    }
   }
 }
 
 @media (max-width: 370px) and (max-height: 800px) {
   .bg-shape {
-    height: 78%;
+    height: 77%;
   }
   .shadow {
     left: -50px;
@@ -596,9 +607,9 @@ section {
   }
 }
 
-@media (max-width: 330px) and (max-height: 1020px) {
+@media (max-width: 330px) and (max-height: 1150px) {
   .bg-shape {
-    height: 75%;
+    height: 74%;
   }
 }
 
@@ -626,17 +637,11 @@ section {
   }
 }
 
-@media (max-width: 330px) and (max-height: 680px) {
-  .info-container {
-    margin-top: -60px;
-  }
-}
-
 @media (max-width: 330px) and (max-height: 670px) {
   .imagebox {
     height: 350px;
   }
   .info-container {
-    margin-top: -20px;
+    margin-top: -100px;
   }
 }

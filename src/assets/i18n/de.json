@@ -63,7 +63,17 @@
       "privacy": "Ich habe die ",
       "privacyPolicy": "Datenschutzerklärung",
       "privacyAgree": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-      "send": "Nachricht senden :)"
+      "send": "Nachricht senden :)",
+      "errors": {
+        "nameRequired": "Dein Name wird benötigt",
+        "nameMinLength": "Mindestens 2 Zeichen lang",
+        "emailRequired": "Deine Email wird benötigt",
+        "emailPattern": "Beispiel: name@testdomain.com",
+        "messageEmpty": "Deine Nachricht ist leer",
+        "messageMinLength": "Mindestens 4 Zeichen lang",
+        "messageMaxLength": "Maximal 1000 Zeichen erlaubt",
+        "privacyRequired": "Datenschutzerklärung bestätigen"
+      }
     }
   },
   "footer": {

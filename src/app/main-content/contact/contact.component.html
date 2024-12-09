@@ -54,14 +54,23 @@
                            formControlName="name" 
                            [placeholder]="'contact.form.name' | translate"
                            [ngClass]="{
-                               'valid': f['name'].valid && (f['name'].dirty || f['name'].touched),
-                               'invalid': f['name'].invalid && (f['name'].dirty || f['name'].touched)
+                               'valid': f['name'].valid && (f['name'].dirty),
+                               'invalid': f['name'].invalid && (f['name'].dirty)
                            }">
-                    @if (f['name'].errors?.['required'] && (f['name'].dirty || f['name'].touched)) {
-                        <span class="error-message">Your name is required</span>
+                             <div class="validation-icon">
+                                @if (f['name'].valid && f['name'].dirty) {
+                                    <img src="assets/img/icons/valid.svg">
+                                }
+                                @if (f['name'].invalid && f['name'].dirty) {
+                                    <img src="assets/img/icons/invalid.svg">
+                                }
+                            </div>
+
+                    @if (f['name'].errors?.['required'] && (f['name'].dirty)) {
+                        <span class="error-message">{{ 'contact.form.errors.nameRequired' | translate }}</span>
                     }
-                    @if (f['name'].errors?.['minlength'] && (f['name'].dirty || f['name'].touched)) {
-                        <span class="error-message">Name must be at least 2 characters long</span>
+                    @if (f['name'].errors?.['minlength'] && (f['name'].dirty)) {
+                        <span class="error-message">{{ 'contact.form.errors.nameMinLength' | translate }}</span>
                     }
                 </div>
             
@@ -69,15 +78,26 @@
                     <input type="email" 
                            formControlName="email" 
                            [placeholder]="'contact.form.email' | translate"
+                           autocomplete="off"
                            [ngClass]="{
-                               'valid': f['email'].valid && (f['email'].dirty || f['email'].touched),
-                               'invalid': f['email'].invalid && (f['email'].dirty || f['email'].touched)
+                               'valid': f['email'].valid && (f['email'].dirty),
+                               'invalid': f['email'].invalid && (f['email'].dirty)
                            }">
-                    @if (f['email'].errors?.['required'] && (f['email'].dirty || f['email'].touched)) {
-                        <span class="error-message">Your email is required</span>
+                            <div class="validation-icon">
+                                @if (f['email'].valid && f['email'].dirty) {
+                                    <img src="assets/img/icons/valid.svg">
+                                }
+                                @if (f['email'].invalid && f['email'].dirty) {
+                                    <img src="assets/img/icons/invalid.svg">
+                                }
+                            </div>
+
+
+                    @if (f['email'].errors?.['required'] && (f['email'].dirty)) {
+                        <span class="error-message">{{ 'contact.form.errors.emailRequired' | translate }}</span>
                     }
-                    @if (f['email'].errors?.['pattern'] && (f['email'].dirty || f['email'].touched)) {
-                        <span class="error-message">Please enter a valid email address (e.g., test&#64;domain.com)</span>
+                    @if (f['email'].errors?.['pattern'] && (f['email'].dirty)) {
+                        <span class="error-message">{{ 'contact.form.errors.emailPattern' | translate }}</span>
                     }
                 </div>
             
@@ -85,12 +105,29 @@
                     <textarea formControlName="message" 
                               [placeholder]="'contact.form.message' | translate"
                               [ngClass]="{
-                                  'valid': f['message'].valid && (f['message'].dirty || f['message'].touched),
-                                  'invalid': f['message'].invalid && (f['message'].dirty || f['message'].touched)
+                                  'valid': f['message'].valid && (f['message'].dirty),
+                                  'invalid': f['message'].invalid && (f['message'].dirty)
                               }">
                     </textarea>
-                    @if (f['message'].errors?.['required'] && (f['message'].dirty || f['message'].touched)) {
-                        <span class="error-message">Your message is empty</span>
+
+                    <div class="validation-icon validation-textarea">
+                        @if (f['message'].valid && f['message'].dirty) {
+                            <img src="assets/img/icons/valid.svg">
+                        }
+                        @if (f['message'].invalid && f['message'].dirty) {
+                            <img src="assets/img/icons/invalid.svg">
+                        }
+                    </div>
+                    
+
+                    @if (f['message'].errors?.['required'] && (f['message'].dirty)) {
+                        <span class="error-message">{{ 'contact.form.errors.messageEmpty' | translate }}</span>
+                    }
+                    @if (f['message'].errors?.['minlength'] && f['message'].dirty) {
+                        <span class="error-message">{{ 'contact.form.errors.messageMinLength' | translate }}</span>
+                    }
+                    @if (f['message'].errors?.['maxlength'] && f['message'].dirty) {
+                        <span class="error-message">{{ 'contact.form.errors.messageMaxLength' | translate }}</span>
                     }
                 </div>
             
@@ -103,7 +140,7 @@
                         {{ 'contact.form.privacyAgree' | translate }}
                     </span>
                     @if (!f['privacy'].value && f['name'].valid && f['email'].valid && f['message'].valid) {
-                        <span class="error-message">Please accept the privacy policy</span>
+                        <span class="error-message">{{ 'contact.form.errors.privacyRequired' | translate }}</span>
                     }
                 </label>
             

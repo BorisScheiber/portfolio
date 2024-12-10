@@ -16,8 +16,8 @@
 
 
         <div class="my-skills-list">
-            @for (skill of skills; track skill.name) {
-            <div>
+            @for (skill of skills; track skill.name; let i = $index) {
+            <div data-aos="fade-up" [attr.data-aos-delay]="i * 100">
                 <span>{{ skill.name === 'Continually learning' ? 
                     ('skills.continuallyLearning' | translate) : skill.name }}</span>
                 <img [src]="skill.icon" [alt]="skill.name">
@@ -25,7 +25,7 @@
             }
         </div>
 
-        <div class="my-skills-text">
+        <div data-aos="fade-up" data-aos-delay="400" class="my-skills-text">
 
             <div class="headline">
                 <h1>{{ 'skills.title' | translate }}</h1>

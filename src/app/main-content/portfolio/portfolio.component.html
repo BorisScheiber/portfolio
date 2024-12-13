@@ -2,7 +2,7 @@
 
   <main class="portfolio-content">
 
-    <div data-aos="fade-left" data-aos-delay="400" class="headline">
+    <div data-aos="fade-right" class="headline">
       <div>
         <span></span>
       </div>
@@ -10,19 +10,22 @@
       <span class="second-seperator"></span>
     </div>
 
-    <div data-aos="fade-left" data-aos-delay="400" class="subtitle">
+    <div data-aos="fade-left" class="subtitle">
       <p>{{ 'portfolio.subtitle' | translate }}</p>
     </div>
 
 
     <div class="projects-container">
 
-      @for (project of projects; track project.title) {
-      <div class="single-project" [class.row-reverse]="project.isReverse">
+      @for (project of projects; track project.title; let i = $index) {
+      @if (!isMobileView()) {
+      <!-- Desktop Version -->
+      <div [attr.data-aos]="project.isReverse ? 'fade-left' : 'fade-right'" [attr.data-aos-anchor]="'#projectInfo' + i"
+        class="single-project" [class.row-reverse]="project.isReverse">
         <div class="project-imagebox">
           <img [src]="project.image" [alt]="project.title">
         </div>
-        <div class="project-info-container">
+        <div class="project-info-container" [id]="'projectInfo' + i">
           <div class="project-descritpion">
             <h2>{{project.title}}</h2>
             <h3>{{project.technologies}}</h3>
@@ -35,7 +38,31 @@
           </div>
         </div>
       </div>
+
+      } @else {
+      <!-- Mobile Version -->
+      <div class="single-project" [class.row-reverse]="project.isReverse">
+        <div data-aos="flip-up" class="project-imagebox">
+          <img [src]="project.image" [alt]="project.title">
+        </div>
+        <div class="project-info-container">
+          <div class="project-descritpion">
+            <h2 data-aos="fade-up">{{project.title}}</h2>
+            <h3 data-aos="fade-up">{{project.technologies}}</h3>
+            <p data-aos="fade-up">{{ project.description | translate }}</p>
+          </div>
+          <div data-aos="fade-up" class="project-links">
+            <a [href]="project.liveLink" target="_blank" rel="noopener noreferrer">{{ 'portfolio.liveTest' | translate
+              }}</a>
+            <a [href]="project.githubLink" target="_blank" rel="noopener noreferrer">Github</a>
+          </div>
+        </div>
+      </div>
       }
+      }
+
+
+
 
     </div>
 

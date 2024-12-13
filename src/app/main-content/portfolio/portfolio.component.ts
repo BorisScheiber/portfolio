@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import AOS from 'aos';
 
 interface Project {
   title: string;
@@ -19,6 +20,8 @@ interface Project {
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
+  private lastViewState: boolean;
+
   projects: Project[] = [
     {
       title: 'Join',
@@ -46,4 +49,22 @@ export class PortfolioComponent {
       githubLink: 'https://github.com/BorisScheiber/pokedex'
     }
   ];
+
+  constructor() {
+    this.lastViewState = this.isMobileView();
+  }
+
+
+  isMobileView(): boolean {
+    return window.innerWidth < 1150;
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    const currentViewState = this.isMobileView();
+    if (currentViewState !== this.lastViewState) {
+      AOS.refresh();
+      this.lastViewState = currentViewState;
+    }
+  }
 }

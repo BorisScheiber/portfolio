@@ -6,10 +6,10 @@
             <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
         </div> -->
 
-        <div class="info info-mobile">
+        <div data-aos="fade-up" class="info info-mobile">
             <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{ 'skills.anotherSkill' | translate }}</span>?</span>
                 <p>{{ 'skills.contact' | translate }}</p>
-                <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
+                <a  href="#contact">{{ 'skills.getInTouch' | translate }}</a>
         </div>
 
 
@@ -17,7 +17,7 @@
 
         <div class="my-skills-list">
             @for (skill of skills; track skill.name; let i = $index) {
-            <div data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+            <div data-aos="fade-up">
                 <span>{{ skill.name === 'Continually learning' ? 
                     ('skills.continuallyLearning' | translate) : skill.name }}</span>
                 <img [src]="skill.icon" [alt]="skill.name">
@@ -25,14 +25,14 @@
             }
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="400" class="my-skills-text">
+        <div class="my-skills-text">
 
-            <div class="headline">
+            <div data-aos="fade-left" class="headline">
                 <h1>{{ 'skills.title' | translate }}</h1>
                 <span></span>
             </div>
 
-            <div class="info">
+            <div data-aos="fade-left" class="info">
                 <p>{{ 'skills.description' | translate }}</p>
                 <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{ 'skills.anotherSkill' | translate }}</span>?</span>
                 <p>{{ 'skills.contact' | translate }}</p>

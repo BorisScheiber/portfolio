@@ -4,7 +4,7 @@
     <main class="contact-content">
 
 
-        <div data-aos="fade-right" data-aos-delay="400" class="headline">
+        <div data-aos="fade-right" class="headline">
             <span></span>
             <h1>{{ 'contact.title' | translate }}</h1>
             <div></div>
@@ -14,7 +14,7 @@
 
         <div class="contact-container">
 
-            <div class="contact-text-container">
+            <div data-aos="fade-right" class="contact-text-container">
                 <h2>{{ 'contact.problem' | translate }}</h2>
 
                 <div>
@@ -49,7 +49,7 @@
 
 
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
-                <div class="input-container">
+                <div data-aos="fade-up" class="input-container">
                     <input type="text" 
                            formControlName="name" 
                            [placeholder]="'contact.form.name' | translate"
@@ -74,7 +74,7 @@
                     }
                 </div>
             
-                <div class="input-container">
+                <div data-aos="fade-up" class="input-container">
                     <input type="email" 
                            formControlName="email" 
                            [placeholder]="'contact.form.email' | translate"
@@ -101,7 +101,7 @@
                     }
                 </div>
             
-                <div class="input-container">
+                <div data-aos="fade-up" class="input-container">
                     <textarea formControlName="message" 
                               [placeholder]="'contact.form.message' | translate"
                               [ngClass]="{
@@ -131,7 +131,7 @@
                     }
                 </div>
             
-                <label class="privacy-accept">
+                <label data-aos="fade-up" class="privacy-accept">
                     <input type="checkbox" 
                            formControlName="privacy" 
                            class="custom-checkbox">
@@ -144,7 +144,7 @@
                     }
                 </label>
             
-                <div class="send-button">
+                <div data-aos="fade-up" class="send-button">
                     <button type="submit" [disabled]="contactForm.invalid">
                         {{ 'contact.form.send' | translate }}
                     </button>
@@ -157,7 +157,7 @@
 
         </div>
 
-        <div class="go-up-button">
+        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="go-up-button">
             <a (click)="scrollToTop()"></a>
         </div>
 

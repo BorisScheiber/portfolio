@@ -262,6 +262,9 @@ section {
   .bg-shape {
     height: 63%;
   }
+  section {
+    min-height: 990px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -289,6 +292,9 @@ section {
   .info-container {
     margin-top: -180px;
   }
+  section {
+    min-height: 890px;
+  }
 }
 
 @media (max-width: 580px) {
@@ -315,6 +321,9 @@ section {
   }
   .bg-shape {
     height: 71%;
+  }
+  section {
+    min-height: 820px;
   }
 }
 
@@ -346,6 +355,9 @@ section {
     left: -70px;
     max-height: 600px;
     top: 0;
+  }
+  section {
+    min-height: 810px;
   }
 }
 
@@ -395,6 +407,10 @@ section {
   .bg-shape {
     height: 73%;
   }
+
+  section {
+    min-height: 690px;
+  }
 }
 
 @media (max-width: 480px) and (max-height: 1100px) {
@@ -420,6 +436,18 @@ section {
       height: 70%;
     }
   }
+}
+
+@media (max-width: 480px) and (max-height: 850px) {
+.imagebox {
+  height: 450px;
+}
+.info-container {
+  margin-top: -135px;
+}
+.nav-socials-container {
+  bottom: 3%;
+}
 }
 
 @media (max-width: 420px) {
@@ -456,6 +484,15 @@ section {
   .bg-shape {
     height: 75%;
   }
+  .info-container {
+    margin-top: -180px;
+  }
+  section {
+    min-height: 670px;
+  }
+  .nav-socials-container {
+    bottom: 5%;
+  }
 }
 
 @media (max-width: 420px) and (max-height: 1000px) {
@@ -473,6 +510,15 @@ section {
   }
   .info-container {
     margin-top: -150px;
+  }
+  .nav-socials-container {
+    bottom: 3%;
+  }
+}
+
+@media (max-width: 380px) {
+  section {
+    min-height: 590px;
   }
 }
 
@@ -519,16 +565,16 @@ section {
       height: 80%;
     }
   }
-  .nav-socials-container {
-    bottom: 3%;
-  }
+  // .nav-socials-container {
+  //   bottom: 3%;
+  // }
 }
 
-@media (max-width: 380px) and (max-height: 680px) {
-  .bg-shape {
-    height: 78%;
-  }
-}
+// @media (max-width: 380px) and (max-height: 680px) {
+//   .bg-shape {
+//     height: 78%;
+//   }
+// }
 
 @media (max-width: 370px) {
   h1 {
@@ -580,6 +626,9 @@ section {
   .links {
     gap: 8px;
   }
+  section {
+    min-height: 590px;
+  }
 }
 
 @media (max-width: 370px) and (max-height: 1050px) {
@@ -604,6 +653,18 @@ section {
   .shadow {
     left: -50px;
     max-height: 450px;
+  }
+}
+
+@media (max-width: 370px) and (max-height: 700px) {
+  .bg-shape {
+    height: 75%;
+  }
+}
+
+@media (max-width: 330px) {
+  section {
+    min-height: 560px;
   }
 }
 

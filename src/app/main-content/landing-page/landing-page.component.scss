@@ -178,6 +178,9 @@ section {
   .landing-content {
     margin-top: 50px;
   }
+  section {
+    min-height: 740px;
+  }
 }
 
 @media (max-width: 1450px) {
@@ -215,6 +218,9 @@ section {
     height: 100%;
     margin-top: -140px;
   }
+  section {
+    min-height: 840px;
+  }
 }
 
 @media (max-width: 1450px) and (max-height: 1200px) {
@@ -230,7 +236,11 @@ section {
   .scroll-down {
     display: none;
   }
+  section {
+    min-height: 920px;
+  }
 }
+
 
 @media (max-width: 900px) {
   .landing-content {

@@ -73,7 +73,17 @@
         "messageMinLength": "Minimum 4 characters long",
         "messageMaxLength": "Maximum 1000 characters allowed",
         "privacyRequired": "Please accept the privacy policy"
-      }
+      },
+      "popup": {
+       "success": {
+         "title": "Thank you :)",
+         "message": "Your message was sent"
+       },
+       "error": {
+         "title": "Error :(",
+         "message": "Message could not be sent"
+       }
+     }
     }
   },
   "footer": {

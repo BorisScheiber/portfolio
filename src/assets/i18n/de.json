@@ -73,6 +73,16 @@
         "messageMinLength": "Mindestens 4 Zeichen lang",
         "messageMaxLength": "Maximal 1000 Zeichen erlaubt",
         "privacyRequired": "Datenschutzerklärung bestätigen"
+      },
+      "popup": {
+        "success": {
+          "title": "Danke :)",
+          "message": "Deine Nachricht wurde gesendet"
+        },
+        "error": {
+          "title": "Fehler :(",
+          "message": "Nachricht konnte nicht gesendet werden"
+        }
       }
     }
   },

@@ -20,6 +20,9 @@ export class ContactComponent {
   submitted = false;
   mailTest = true; 
 
+  showThankYouMessage = false;
+  showErrorMessage = false;
+  isHiding = false;
  
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -53,9 +56,13 @@ export class ContactComponent {
             next: (response) => {
               this.contactForm.reset();
               this.submitted = false;
+              this.showThankYouMessage = true;
+              this.startHideTimer('success');
             },
             error: (error) => {
               console.error(error);
+              this.showErrorMessage = true;
+              this.startHideTimer('error');
             },
             complete: () => console.info('send post complete'),
           });
@@ -64,6 +71,9 @@ export class ContactComponent {
         console.log('Test mode - Form data:', formData);
         this.contactForm.reset();
         this.submitted = false;
+        this.showThankYouMessage = true;
+        // this.showErrorMessage = true;
+        this.startHideTimer('success');
       }
     }
   }
@@ -71,6 +81,22 @@ export class ContactComponent {
   get f() {
     return this.contactForm.controls;
   }
+
+
+  startHideTimer(type: 'success' | 'error') {
+    setTimeout(() => {
+      this.isHiding = true;
+      setTimeout(() => {
+        if (type === 'success') {
+          this.showThankYouMessage = false;
+        } else {
+          this.showErrorMessage = false;
+        }
+        this.isHiding = false;
+      }, 400);
+    }, 3000);
+  }
+
 
 
 

@@ -151,11 +151,31 @@
                 </div>
             </form>
 
-
-
-
-
         </div>
+
+        @if (showThankYouMessage) {
+            <div class="thank-you-popup" [class.hide]="isHiding">
+                <div class="popup-card" [class.hide]="isHiding">
+                <img src="assets/img/icons/valid.svg" alt="Success">
+                <div class="popup-message success">
+                <span>{{ 'contact.form.popup.success.title' | translate }}</span>
+                <span>{{ 'contact.form.popup.success.message' | translate }}</span>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (showErrorMessage) {
+        <div class="thank-you-popup" [class.hide]="isHiding">
+            <div class="popup-card error" [class.hide]="isHiding">
+                <img src="assets/img/icons/invalid.svg" alt="Error">
+                <div class="popup-message">
+                <span>{{ 'contact.form.popup.error.title' | translate }}</span>
+                <span>{{ 'contact.form.popup.error.message' | translate }}</span>
+                </div>
+            </div>
+        </div>
+    }
 
         <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="go-up-button">
             <a (click)="scrollToTop()"></a>

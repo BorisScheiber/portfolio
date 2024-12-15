@@ -114,6 +114,14 @@ section {
   }
 }
 
+@media (max-width: 650px) {
+  .headline {
+    span:last-of-type {
+      display: none;
+    }
+}
+}
+
 @media (max-width: 550px) {
   section {
     padding-left: 25px;
@@ -121,13 +129,14 @@ section {
   }
   .headline {
     gap: 16px;
+    margin-bottom: 28px;
 
     span:last-of-type {
       width: 25px;
     }
   }
 
-  .imprint-container {
+  .privacy-container {
     h2 {
       font-size: 26px;
     }

@@ -85,6 +85,14 @@ section {
   }
 }
 
+@media (max-width: 650px) {
+  .headline {
+    span:last-of-type {
+      display: none;
+    }
+}
+}
+
 @media (max-width: 550px) {
   section {
     padding-left: 25px;

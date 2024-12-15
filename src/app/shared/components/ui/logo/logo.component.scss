@@ -9,6 +9,10 @@
   display: inline-block;
   // min-width: 145px;
   white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;  
+  -moz-user-select: none;     
+  -ms-user-select: none;      
 }
 
 .curly-braces {

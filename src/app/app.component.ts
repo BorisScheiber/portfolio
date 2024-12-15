@@ -58,6 +58,7 @@ export class AppComponent {
       duration: 1000,
       once: true,
       offset: this.getAOSOffset(),
+      startEvent: 'load',
     });
   }
 

@@ -18,14 +18,14 @@ export class ContactComponent {
   
   contactForm!: FormGroup;
   submitted = false;
-  mailTest = true; 
+  mailTest = false; // Test-Modus 
 
   showThankYouMessage = false;
   showErrorMessage = false;
   isHiding = false;
  
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://boris-scheiber.at/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

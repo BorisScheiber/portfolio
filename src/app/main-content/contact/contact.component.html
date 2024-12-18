@@ -11,7 +11,6 @@
         </div>
 
 
-
         <div class="contact-container">
 
             <div data-aos="fade-right" class="contact-text-container">
@@ -23,88 +22,55 @@
                 </div>
             </div>
 
-            <!-- OLD FORM -->
-            <!-- <form class="contact-form">
-                <div>
-                    <input type="text" [placeholder]="'contact.form.name' | translate" required>
-                </div>
-                <div>
-                    <input type="email" [placeholder]="'contact.form.email' | translate" required>
-                </div>
-                <div>
-                    <textarea name="" id="" [placeholder]="'contact.form.message' | translate" required></textarea>
-                </div>
-
-                <label class="privacy-accept">
-                    <input type="checkbox" formControlName="privacy" class="custom-checkbox" required>
-                    <span>{{ 'contact.form.privacy' | translate }} <a routerLink="/privacy-policy">{{ 'contact.form.privacyPolicy' | translate }}</a> {{ 'contact.form.privacyAgree' | translate }}</span>
-                </label>
-
-                <div class="send-button">
-                    <button type="submit">
-                        {{ 'contact.form.send' | translate }}
-                    </button>
-                </div>
-            </form> -->
-
-
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
                 <div data-aos="fade-up" class="input-container">
-                    <input type="text" 
-                           formControlName="name" 
-                           [placeholder]="'contact.form.name' | translate"
-                           [ngClass]="{
+                    <input type="text" formControlName="name" [placeholder]="'contact.form.name' | translate" [ngClass]="{
                                'valid': f['name'].valid && (f['name'].dirty),
                                'invalid': f['name'].invalid && (f['name'].dirty)
                            }">
-                             <div class="validation-icon">
-                                @if (f['name'].valid && f['name'].dirty) {
-                                    <img src="assets/img/icons/valid.svg">
-                                }
-                                @if (f['name'].invalid && f['name'].dirty) {
-                                    <img src="assets/img/icons/invalid.svg">
-                                }
-                            </div>
+                    <div class="validation-icon">
+                        @if (f['name'].valid && f['name'].dirty) {
+                        <img src="assets/img/icons/valid.svg">
+                        }
+                        @if (f['name'].invalid && f['name'].dirty) {
+                        <img src="assets/img/icons/invalid.svg">
+                        }
+                    </div>
 
                     @if (f['name'].errors?.['required'] && (f['name'].dirty)) {
-                        <span class="error-message">{{ 'contact.form.errors.nameRequired' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.nameRequired' | translate }}</span>
                     }
                     @if (f['name'].errors?.['minlength'] && (f['name'].dirty)) {
-                        <span class="error-message">{{ 'contact.form.errors.nameMinLength' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.nameMinLength' | translate }}</span>
                     }
                 </div>
-            
+
                 <div data-aos="fade-up" class="input-container">
-                    <input type="email" 
-                           formControlName="email" 
-                           [placeholder]="'contact.form.email' | translate"
-                           autocomplete="off"
-                           [ngClass]="{
+                    <input type="email" formControlName="email" [placeholder]="'contact.form.email' | translate"
+                        autocomplete="off" [ngClass]="{
                                'valid': f['email'].valid && (f['email'].dirty),
                                'invalid': f['email'].invalid && (f['email'].dirty)
                            }">
-                            <div class="validation-icon">
-                                @if (f['email'].valid && f['email'].dirty) {
-                                    <img src="assets/img/icons/valid.svg">
-                                }
-                                @if (f['email'].invalid && f['email'].dirty) {
-                                    <img src="assets/img/icons/invalid.svg">
-                                }
-                            </div>
+                    <div class="validation-icon">
+                        @if (f['email'].valid && f['email'].dirty) {
+                        <img src="assets/img/icons/valid.svg">
+                        }
+                        @if (f['email'].invalid && f['email'].dirty) {
+                        <img src="assets/img/icons/invalid.svg">
+                        }
+                    </div>
 
 
                     @if (f['email'].errors?.['required'] && (f['email'].dirty)) {
-                        <span class="error-message">{{ 'contact.form.errors.emailRequired' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.emailRequired' | translate }}</span>
                     }
                     @if (f['email'].errors?.['pattern'] && (f['email'].dirty)) {
-                        <span class="error-message">{{ 'contact.form.errors.emailPattern' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.emailPattern' | translate }}</span>
                     }
                 </div>
-            
+
                 <div data-aos="fade-up" class="input-container">
-                    <textarea formControlName="message" 
-                              [placeholder]="'contact.form.message' | translate"
-                              [ngClass]="{
+                    <textarea formControlName="message" [placeholder]="'contact.form.message' | translate" [ngClass]="{
                                   'valid': f['message'].valid && (f['message'].dirty),
                                   'invalid': f['message'].invalid && (f['message'].dirty)
                               }">
@@ -112,38 +78,36 @@
 
                     <div class="validation-icon validation-textarea">
                         @if (f['message'].valid && f['message'].dirty) {
-                            <img src="assets/img/icons/valid.svg">
+                        <img src="assets/img/icons/valid.svg">
                         }
                         @if (f['message'].invalid && f['message'].dirty) {
-                            <img src="assets/img/icons/invalid.svg">
+                        <img src="assets/img/icons/invalid.svg">
                         }
                     </div>
-                    
+
 
                     @if (f['message'].errors?.['required'] && (f['message'].dirty)) {
-                        <span class="error-message">{{ 'contact.form.errors.messageEmpty' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.messageEmpty' | translate }}</span>
                     }
                     @if (f['message'].errors?.['minlength'] && f['message'].dirty) {
-                        <span class="error-message">{{ 'contact.form.errors.messageMinLength' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.messageMinLength' | translate }}</span>
                     }
                     @if (f['message'].errors?.['maxlength'] && f['message'].dirty) {
-                        <span class="error-message">{{ 'contact.form.errors.messageMaxLength' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.messageMaxLength' | translate }}</span>
                     }
                 </div>
-            
+
                 <label data-aos="fade-up" class="privacy-accept">
-                    <input type="checkbox" 
-                           formControlName="privacy" 
-                           class="custom-checkbox">
-                    <span>{{ 'contact.form.privacy' | translate }} 
-                        <a routerLink="/privacy-policy">{{ 'contact.form.privacyPolicy' | translate }}</a> 
+                    <input type="checkbox" formControlName="privacy" class="custom-checkbox">
+                    <span>{{ 'contact.form.privacy' | translate }}
+                        <a routerLink="/privacy-policy">{{ 'contact.form.privacyPolicy' | translate }}</a>
                         {{ 'contact.form.privacyAgree' | translate }}
                     </span>
                     @if (!f['privacy'].value && f['name'].valid && f['email'].valid && f['message'].valid) {
-                        <span class="error-message">{{ 'contact.form.errors.privacyRequired' | translate }}</span>
+                    <span class="error-message">{{ 'contact.form.errors.privacyRequired' | translate }}</span>
                     }
                 </label>
-            
+
                 <div data-aos="fade-up" class="send-button">
                     <button type="submit" [disabled]="contactForm.invalid">
                         {{ 'contact.form.send' | translate }}
@@ -154,28 +118,28 @@
         </div>
 
         @if (showThankYouMessage) {
-            <div class="thank-you-popup" [class.hide]="isHiding">
-                <div class="popup-card" [class.hide]="isHiding">
+        <div class="thank-you-popup" [class.hide]="isHiding">
+            <div class="popup-card" [class.hide]="isHiding">
                 <img src="assets/img/icons/valid.svg" alt="Success">
                 <div class="popup-message success">
-                <span>{{ 'contact.form.popup.success.title' | translate }}</span>
-                <span>{{ 'contact.form.popup.success.message' | translate }}</span>
+                    <span>{{ 'contact.form.popup.success.title' | translate }}</span>
+                    <span>{{ 'contact.form.popup.success.message' | translate }}</span>
                 </div>
             </div>
         </div>
-    }
+        }
 
-    @if (showErrorMessage) {
+        @if (showErrorMessage) {
         <div class="thank-you-popup" [class.hide]="isHiding">
             <div class="popup-card error" [class.hide]="isHiding">
                 <img src="assets/img/icons/invalid.svg" alt="Error">
                 <div class="popup-message">
-                <span>{{ 'contact.form.popup.error.title' | translate }}</span>
-                <span>{{ 'contact.form.popup.error.message' | translate }}</span>
+                    <span>{{ 'contact.form.popup.error.title' | translate }}</span>
+                    <span>{{ 'contact.form.popup.error.message' | translate }}</span>
                 </div>
             </div>
         </div>
-    }
+        }
 
         <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="go-up-button">
             <a (click)="scrollToTop()"></a>

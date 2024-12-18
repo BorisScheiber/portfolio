@@ -1,24 +1,18 @@
 <section id="skills">
-
     <main class="my-skills-content">
 
-        <!-- <div class="link-mobile">
-            <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
-        </div> -->
-
         <div data-aos="fade-up" class="info info-mobile">
-            <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{ 'skills.anotherSkill' | translate }}</span>?</span>
-                <p>{{ 'skills.contact' | translate }}</p>
-                <a  href="#contact">{{ 'skills.getInTouch' | translate }}</a>
+            <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{
+                    'skills.anotherSkill' | translate }}</span>?</span>
+            <p>{{ 'skills.contact' | translate }}</p>
+            <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
         </div>
-
-
 
 
         <div class="my-skills-list">
             @for (skill of skills; track skill.name; let i = $index) {
             <div data-aos="fade-up">
-                <span>{{ skill.name === 'Continually learning' ? 
+                <span>{{ skill.name === 'Continually learning' ?
                     ('skills.continuallyLearning' | translate) : skill.name }}</span>
                 <img [src]="skill.icon" [alt]="skill.name">
             </div>
@@ -34,7 +28,8 @@
 
             <div data-aos="fade-left" class="info">
                 <p>{{ 'skills.description' | translate }}</p>
-                <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{ 'skills.anotherSkill' | translate }}</span>?</span>
+                <span class="highlight-text">{{ 'skills.lookingFor' | translate }} <span class="skill-text">{{
+                        'skills.anotherSkill' | translate }}</span>?</span>
                 <p>{{ 'skills.contact' | translate }}</p>
                 <a href="#contact">{{ 'skills.getInTouch' | translate }}</a>
             </div>
@@ -42,17 +37,10 @@
 
         </div>
 
-
-
         <div class="shadow-element">
             <img src="/assets/img/shadowmyskills.svg" alt="">
         </div>
 
-
-
-
     </main>
-
-
 
 </section>

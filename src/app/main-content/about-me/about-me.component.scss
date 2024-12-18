@@ -2,7 +2,7 @@
 @import "../../../styles/mixins.scss";
 
 section {
-    @include section-container();
+  @include section-container();
 }
 
 .about-me-content {
@@ -70,13 +70,11 @@ section {
 }
 
 @media (max-width: 1600px) {
-
   section {
     padding-left: 100px;
   }
 
   .profile-img-container {
-
     div {
       width: 400px;
       height: 400px;
@@ -86,12 +84,10 @@ section {
       width: 200px;
     }
   }
-  
 }
 
 @media (max-width: 1450px) {
   .profile-img-container {
-
     div {
       width: 400px;
       height: 400px;
@@ -113,7 +109,6 @@ section {
       width: 100px;
     }
   }
-
 }
 
 @media (max-width: 1200px) {
@@ -143,19 +138,19 @@ section {
 }
 
 @media (max-width: 900px) {
- section {
+  section {
     padding: 100px 50px 50px 50px;
   }
- }
+}
 
- @media (max-width: 550px) {
+@media (max-width: 550px) {
   section {
     padding: 100px 25px 50px 25px;
   }
- }
+}
 
- @media (max-width: 480px) {
+@media (max-width: 480px) {
   section {
     padding: 75px 25px 50px 25px;
   }
- }
+}

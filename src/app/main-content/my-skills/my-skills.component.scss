@@ -20,7 +20,6 @@ section {
   div {
     @include dFlex();
     width: 120px;
-    // background-color: lightcoral;
     flex-direction: column-reverse;
 
     img {
@@ -188,18 +187,7 @@ section {
       display: block;
       margin-top: 80px;
     }
-
-    // p:last-of-type {
-    //   display: block;
-    // }
-    // .highlight-text {
-    //   display: block;
-    // }
   }
-
-  // .link-mobile {
-  //   display: inline-flex;
-  // }
 
   .shadow-element {
     bottom: -500px;

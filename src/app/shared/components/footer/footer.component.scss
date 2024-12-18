@@ -2,75 +2,74 @@
 @import "../../../../styles/mixins.scss";
 
 footer {
-    height: 250px;
-    @include dFlex();
-    padding: 0 100px 0 100px;
-    border-top: 4px solid $primary-color;
+  height: 250px;
+  @include dFlex();
+  padding: 0 100px 0 100px;
+  border-top: 4px solid $primary-color;
 }
 
 .footer-content {
-    @include dFlex($justify: space-between);
-    max-width: $max-width;  
-    width: 100%;
-    display: flex;
+  @include dFlex($justify: space-between);
+  max-width: $max-width;
+  width: 100%;
+  display: flex;
 }
 
 .imprint-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    span {
-        font-size: 23px;
+  span {
+    font-size: 23px;
+  }
+
+  a {
+    font-size: 16px;
+    transition: $transiton-base;
+
+    &:hover {
+      color: $primary-color;
     }
-
-     a {
-        font-size: 16px;
-        transition: $transiton-base;
-
-        &:hover {
-            color: $primary-color;
-        }
-     }
+  }
 }
 
 .imprint-link-mobile {
-    display: none;
+  display: none;
 }
 
-
 @media (max-width: 950px) {
-    footer {
-        height: 300px;
+  footer {
+    height: 300px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .imprint-link-mobile {
+    display: inline;
+  }
+  .imprint-info {
+    a {
+      display: none;
     }
-    .footer-content {
-        flex-direction: column;
-        gap: 24px;
-    }
-    .imprint-link-mobile {
-        display: inline;
-    }
-    .imprint-info {
-        a {
-            display: none;
-        }
-    }
+  }
 }
 
 @media (max-width: 480px) {
-    footer {
-        padding: 0;
+  footer {
+    padding: 0;
+  }
+  .imprint-info {
+    span {
+      font-size: 20px;
     }
-    .imprint-info {
-        span {
-            font-size: 20px;
-        }
+  }
+  app-logo {
+    ::ng-deep {
+      .logo {
+        font-size: 44px !important;
+      }
     }
-    app-logo {
-        ::ng-deep {
-            .logo {
-                font-size: 44px !important;
-            }
-        }
-    }
+  }
 }

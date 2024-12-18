@@ -7,10 +7,8 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   background-color: $bg-color;
-  // overflow-x: hidden;
 }
 
 * {
@@ -28,10 +26,10 @@ h1 {
 }
 
 h2 {
- font-size: 32px;
- line-height: 38.4px;
- color: $secondary-color;
- font-weight: $font-bold;
+  font-size: 32px;
+  line-height: 38.4px;
+  color: $secondary-color;
+  font-weight: $font-bold;
 }
 
 h3 {
@@ -68,9 +66,8 @@ p {
 }
 
 ::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
-
 
 @media (max-width: 1600px) {
   h1 {

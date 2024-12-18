@@ -1,13 +1,13 @@
 <footer>
     <div class="footer-content">
-    
-    <app-logo fontSize="48px" minWidth="unset"></app-logo>
 
-    <div class="imprint-info">
-        <span>{{ 'footer.copyright' | translate }}</span>
-        <a routerLink="/imprint">{{ 'footer.imprint' | translate }}</a>
+        <app-logo fontSize="48px" minWidth="unset"></app-logo>
+
+        <div class="imprint-info">
+            <span>{{ 'footer.copyright' | translate }}</span>
+            <a routerLink="/imprint">{{ 'footer.imprint' | translate }}</a>
+        </div>
+        <app-social-links [gap]="42"></app-social-links>
+        <a class="imprint-link-mobile" routerLink="/imprint">{{ 'footer.imprint' | translate }}</a>
     </div>
-    <app-social-links [gap]="42"></app-social-links>
-    <a class="imprint-link-mobile" routerLink="/imprint">{{ 'footer.imprint' | translate }}</a>
-</div>
 </footer>

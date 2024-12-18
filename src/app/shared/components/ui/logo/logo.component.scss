@@ -2,17 +2,15 @@
 @import "../../../../../styles/mixins.scss";
 
 .logo {
-  // font-size: 32px;
   font-weight: $font-medium;
   letter-spacing: 0.8px;
   cursor: pointer;
   display: inline-block;
-  // min-width: 145px;
   white-space: nowrap;
   user-select: none;
-  -webkit-user-select: none;  
-  -moz-user-select: none;     
-  -ms-user-select: none;      
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .curly-braces {

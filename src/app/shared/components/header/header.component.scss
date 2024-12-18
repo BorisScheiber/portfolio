@@ -15,14 +15,14 @@ header {
 }
 
 .header-content {
-    max-width: $max-width;  
-    width: 100%;
-    display: flex;
-    align-items: center;
+  max-width: $max-width;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .menu {
- @include dFlex($align: center, $gap: 29px);
+  @include dFlex($align: center, $gap: 29px);
   margin-left: auto;
 }
 
@@ -30,7 +30,7 @@ header {
   font-size: 23px;
   line-height: 27.6px;
   position: relative;
-  transition: $transiton-base; 
+  transition: $transiton-base;
 
   &.clicked {
     color: $primary-color;
@@ -56,7 +56,6 @@ header {
     color: $primary-color;
   }
 }
-
 
 .burger-icon {
   --burger-width: 38px;
@@ -101,35 +100,35 @@ header {
   .line-1 {
     transform: translateY(var(--translate-value)) rotate(45deg);
   }
-  
+
   .line-2 {
     opacity: 0;
   }
-  
+
   .line-3 {
     transform: translateY(calc(var(--translate-value) * -1)) rotate(-45deg);
   }
 }
 
 @media (max-width: 950px) {
- .burger-icon {
-  display: block;
-  position: relative;
- }
+  .burger-icon {
+    display: block;
+    position: relative;
+  }
 
- .menu {
-  display: none;
- }
+  .menu {
+    display: none;
+  }
 }
 
 @media (max-width: 900px) {
   header {
     padding: 37px 50px 37px 50px;
-  } 
+  }
 }
 
 @media (max-width: 550px) {
   header {
     padding: 37px 25px 37px 25px;
-  } 
+  }
 }

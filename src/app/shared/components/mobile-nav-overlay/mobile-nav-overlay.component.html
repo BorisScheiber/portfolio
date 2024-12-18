@@ -1,21 +1,21 @@
 @if (isMenuOpen) {
-    <div class="nav-overlay" @slideIn>
-      <nav class="menu-content">
-        <div class="menu-links">
-          <span class="link" (click)="mobileNavigateTo('about-me')">
-            {{ 'mobileNavOverlay.about' | translate }}
-          </span>
-          <span class="link" (click)="mobileNavigateTo('skills')">
-            {{ 'mobileNavOverlay.skills' | translate }}
-          </span>
-          <span class="link" (click)="mobileNavigateTo('portfolio')">
-            {{ 'mobileNavOverlay.portfolio' | translate }}
-          </span>
-          <span class="link" (click)="mobileNavigateTo('contact')">
-            {{ 'mobileNavOverlay.contact' | translate }}
-          </span>
-          <app-language-switch></app-language-switch>
-        </div>
-      </nav>
+<div class="nav-overlay" @slideIn>
+  <nav class="menu-content">
+    <div class="menu-links">
+      <span class="link" (click)="mobileNavigateTo('about-me')">
+        {{ 'mobileNavOverlay.about' | translate }}
+      </span>
+      <span class="link" (click)="mobileNavigateTo('skills')">
+        {{ 'mobileNavOverlay.skills' | translate }}
+      </span>
+      <span class="link" (click)="mobileNavigateTo('portfolio')">
+        {{ 'mobileNavOverlay.portfolio' | translate }}
+      </span>
+      <span class="link" (click)="mobileNavigateTo('contact')">
+        {{ 'mobileNavOverlay.contact' | translate }}
+      </span>
+      <app-language-switch></app-language-switch>
     </div>
-  }
+  </nav>
+</div>
+}

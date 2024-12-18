@@ -2,11 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
+/**
+ * Interface representing a skill with an icon and a name.
+ */
 interface Skill {
   icon: string;
   name: string;
 }
 
+/**
+ * Component for displaying a list of skills with associated icons.
+ */
 @Component({
   selector: 'app-my-skills',
   standalone: true,
@@ -15,7 +21,6 @@ interface Skill {
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
-
   skills: Skill[] = [
     { icon: '/assets/img/icons/html.svg' , name: 'HTML' },
     { icon: '/assets/img/icons/css.svg', name: 'CSS' },
@@ -29,6 +34,4 @@ export class MySkillsComponent {
     { icon: '/assets/img/icons/materialdesign.svg', name: 'Material Design' },
     { icon: '/assets/img/icons/continuallylearning.svg', name: 'Continually learning' }
   ];
-
-
 }

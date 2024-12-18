@@ -6,27 +6,43 @@ import { CommonModule } from '@angular/common';
 import { LanguageSwitchComponent } from '../ui/language-switch/language-switch.component';
 import { TranslateModule } from '@ngx-translate/core';
 
+/**
+ * Header component of the application.
+ * Displays the logo, language switcher, and handles navigation and menu interactions.
+ */
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,LogoComponent, LanguageSwitchComponent, RouterModule, TranslateModule],
+  imports: [
+    CommonModule,
+    LogoComponent,
+    LanguageSwitchComponent,
+    RouterModule,
+    TranslateModule,
+  ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-
+  /** Indicates whether the mobile menu is open. */
   @Input() isMenuOpen = false;
+
+  /** Emits an event to toggle the mobile menu. */
   @Output() toggleMenuEvent = new EventEmitter<void>();
 
   constructor(private router: Router) {}
 
-
+  /**
+   * Toggles the state of the mobile menu.
+   */
   toggleMenu() {
     this.toggleMenuEvent.emit();
   }
 
-
-
+  /**
+   * Handles link clicks by adding and removing a temporary "clicked" class.
+   * @param event The mouse event triggered by the link click.
+   */
   handleLinkClick(event: MouseEvent) {
     const link = event.target as HTMLElement;
     if (link) {
@@ -37,7 +53,11 @@ export class HeaderComponent {
     }
   }
 
-
+  /**
+   * Scrolls to a specific section or navigates to the homepage and then scrolls.
+   * @param sectionId The ID of the section to scroll to.
+   * @param event The mouse event triggered by the click.
+   */
   scrollToSection(sectionId: string, event: MouseEvent) {
     if (this.router.url !== '/') {
       this.navigateAndScroll(sectionId);
@@ -47,7 +67,10 @@ export class HeaderComponent {
     this.handleLinkClick(event);
   }
 
- 
+  /**
+   * Navigates to the homepage and scrolls to a specific section.
+   * @param sectionId The ID of the section to scroll to.
+   */
   navigateAndScroll(sectionId: string) {
     this.router.navigate(['/']).then(() => {
       setTimeout(() => {
@@ -56,13 +79,14 @@ export class HeaderComponent {
     });
   }
 
- 
+  /**
+   * Scrolls to a specific element by its ID.
+   * @param sectionId The ID of the element to scroll to.
+   */
   scrollToElement(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView();
     }
   }
-
-
 }

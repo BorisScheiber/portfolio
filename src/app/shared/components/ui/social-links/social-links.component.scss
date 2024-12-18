@@ -2,14 +2,14 @@
 @import "../../../../../styles/mixins.scss";
 
 .social-links {
-    display: flex;
-  
-    img {
-      @include dFlex();
-      transition: $transiton-base;
-  
-      &:hover {
-        transform: scale(1.3);
-      }
+  display: flex;
+
+  img {
+    @include dFlex();
+    transition: $transiton-base;
+
+    &:hover {
+      transform: scale(1.3);
     }
   }
+}

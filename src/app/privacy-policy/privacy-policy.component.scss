@@ -61,10 +61,6 @@ section {
   width: 100%;
   margin-bottom: 60px;
 
-  // span:first-of-type {
-  //   @include vertical-line($bgcolor: $secondary-color);
-  // }
-
   span:last-of-type {
     @include vertical-line($bgcolor: $secondary-color, $width: 100px);
   }
@@ -99,7 +95,6 @@ section {
   word-break: break-word;
 }
 
-
 @media (max-width: 900px) {
   section {
     padding-left: 50px;
@@ -119,7 +114,7 @@ section {
     span:last-of-type {
       display: none;
     }
-}
+  }
 }
 
 @media (max-width: 550px) {
@@ -144,24 +139,24 @@ section {
 }
 
 @media (max-width: 470px) {
-section {
-  padding-top: 75px;
-}
+  section {
+    padding-top: 75px;
+  }
 }
 
 @media (max-width: 370px) {
-.headline {
-  gap: 8px;
-   h1 {
-    font-size: 36px;
-   }
-}
+  .headline {
+    gap: 8px;
+    h1 {
+      font-size: 36px;
+    }
+  }
 }
 
 @media (max-width: 340px) {
- .headline {
-  span:last-of-type {
-    display: none;
+  .headline {
+    span:last-of-type {
+      display: none;
+    }
   }
- }
 }

@@ -19,13 +19,20 @@ export class LogoComponent {
  handleLogoClick() {
   if (this.router.url !== '/') {
     this.router.navigate(['/']).then(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }, 100);
     });
   } else {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
+  
   if (this.isMenuOpen) {
     this.closeMenu.emit();
   }
- }
+}
 }

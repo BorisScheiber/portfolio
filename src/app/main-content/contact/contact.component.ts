@@ -56,40 +56,6 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  // onSubmit() {
-  //   this.submitted = true;
-
-  //   if (this.contactForm.valid) {
-  //     const formData = this.contactForm.value;
-
-  //     if (!this.mailTest) {
-  //       this.http.post(this.post.endPoint, this.post.body(formData))
-  //         .subscribe({
-  //           next: (response) => {
-  //             this.contactForm.reset();
-  //             this.submitted = false;
-  //             this.showThankYouMessage = true;
-  //             this.startHideTimer('success');
-  //           },
-  //           error: (error) => {
-  //             console.error(error);
-  //             this.showErrorMessage = true;
-  //             this.startHideTimer('error');
-  //           },
-  //           complete: () => console.info('send post complete'),
-  //         });
-  //     } else {
-  //       // Test-Modus
-  //       console.log('Test mode - Form data:', formData);
-  //       this.contactForm.reset();
-  //       this.submitted = false;
-  //       this.showThankYouMessage = true;
-  //       // this.showErrorMessage = true;
-  //       this.startHideTimer('success');
-  //     }
-  //   }
-  // }
-
   /**
    * Handles form submission. Validates the form and sends data if valid.
    */

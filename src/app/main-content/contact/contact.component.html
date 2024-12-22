@@ -37,11 +37,16 @@
                         }
                     </div>
 
-                    @if (f['name'].errors?.['required'] && (f['name'].dirty)) {
-                    <span class="error-message">{{ 'contact.form.errors.nameRequired' | translate }}</span>
-                    }
-                    @if (f['name'].errors?.['minlength'] && (f['name'].dirty)) {
-                    <span class="error-message">{{ 'contact.form.errors.nameMinLength' | translate }}</span>
+                    @if (f['name'].errors && f['name'].dirty) {
+                        @if (f['name'].errors['required']) {
+                            <span class="error-message">{{ 'contact.form.errors.nameRequired' | translate }}</span>
+                        } @else if (f['name'].errors['minlength']) {
+                            <span class="error-message">{{ 'contact.form.errors.nameMinLength' | translate }}</span>
+                        } @else if (f['name'].errors['pattern']) {
+                            <span class="error-message">{{ 'contact.form.errors.namePattern' | translate }}</span>
+                        } @else if (f['name'].errors['maxlength']) {
+                            <span class="error-message">{{ 'contact.form.errors.nameMaxLength' | translate }}</span>
+                        }
                     }
                 </div>
 
@@ -61,11 +66,14 @@
                     </div>
 
 
-                    @if (f['email'].errors?.['required'] && (f['email'].dirty)) {
-                    <span class="error-message">{{ 'contact.form.errors.emailRequired' | translate }}</span>
-                    }
-                    @if (f['email'].errors?.['pattern'] && (f['email'].dirty)) {
-                    <span class="error-message">{{ 'contact.form.errors.emailPattern' | translate }}</span>
+                    @if (f['email'].errors && f['email'].dirty) {
+                        @if (f['email'].errors['required']) {
+                            <span class="error-message">{{ 'contact.form.errors.emailRequired' | translate }}</span>
+                        } @else if (f['email'].errors['pattern']) {
+                            <span class="error-message">{{ 'contact.form.errors.emailPattern' | translate }}</span>
+                        } @else if (f['email'].errors['maxlength']) {
+                            <span class="error-message">{{ 'contact.form.errors.emailMaxLength' | translate }}</span>
+                        }
                     }
                 </div>
 

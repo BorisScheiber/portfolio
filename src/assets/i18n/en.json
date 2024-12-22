@@ -67,8 +67,11 @@
       "errors": {
         "nameRequired": "Your name is required",
         "nameMinLength": "Minimum 2 characters long",
+        "nameMaxLength": "Maximum 50 characters allowed",
+        "namePattern": "Only letters allowed",
         "emailRequired": "Your email is required",
         "emailPattern": "Example: name@testdomain.com",
+        "emailMaxLength": "Maximum 100 characters allowed",
         "messageEmpty": "Your message is empty",
         "messageMinLength": "Minimum 4 characters long",
         "messageMaxLength": "Maximum 1000 characters allowed",

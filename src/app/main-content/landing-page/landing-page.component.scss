@@ -178,6 +178,12 @@ section {
   }
 }
 
+@media (max-height: 950px) {
+  .landing-content {
+    margin-top: 24px;
+  }
+}
+
 @media (max-width: 1450px) {
   .landing-content {
     flex-direction: column;

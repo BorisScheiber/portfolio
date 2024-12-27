@@ -1,6 +1,13 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/mixins.scss";
 
+
+h1 {
+  font-size: 90px;
+    font-weight: 700;
+    line-height: 96px;
+}
+
 section {
   height: calc(100vh - 110px);
   margin-top: 110px;
@@ -68,7 +75,8 @@ section {
   line-height: 76.8px;
 
   &:lang(de) {
-    font-size: 44px;
+    font-size: 42px;
+    line-height: 70.8px;
   }
 }
 

@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
   isHiding = false;
 
   post = {
-    endPoint: 'https://boris-scheiber.at/sendMail.php',
+    endPoint: 'https://scheiber-boris.at/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

@@ -35,7 +35,7 @@ export class PortfolioComponent {
       technologies: 'Javascript | HTML | CSS | Firebase',
       description: 'portfolio.projects.join.description',
       image: '/assets/img/joinlaptop.png',
-      liveLink: 'https://join.boris-scheiber.at',
+      liveLink: 'https://join.scheiber-boris.at',
       githubLink: 'https://github.com/BorisScheiber/join-294',
     },
     {
@@ -43,7 +43,7 @@ export class PortfolioComponent {
       technologies: 'Javascript | HTML | CSS',
       description: 'portfolio.projects.elPolloLoco.description',
       image: '/assets/img/elpollolocolaptop.png',
-      liveLink: 'https://el-pollo-loco.boris-scheiber.at',
+      liveLink: 'https://el-pollo-loco.scheiber-boris.at',
       githubLink: 'https://github.com/BorisScheiber/el-pollo-loco',
       isReverse: true,
     },
@@ -52,7 +52,7 @@ export class PortfolioComponent {
       technologies: 'JavaScript | HTML | CSS | API',
       description: 'portfolio.projects.pokedex.description',
       image: '/assets/img/pokedexlaptop.png',
-      liveLink: 'https://pokedex.boris-scheiber.at',
+      liveLink: 'https://pokedex.scheiber-boris.at',
       githubLink: 'https://github.com/BorisScheiber/pokedex',
     },
   ];
